@@ -1,6 +1,6 @@
 <template>
   <div class="rounded bg-white p-8
-  flex-col xl:w-5/6 w-full mx-auto shadow-md">
+  flex-col xl:w-11/12 w-full mx-auto shadow-md">
     <div class="flex items-baseline xs:items-center
     text-left text-blue-700 font-bold mb-2
     md:text-5xl text-4xl">
