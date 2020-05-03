@@ -1,20 +1,18 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div id="app" class="flex flex-col items-center">
+    <div id="nav" class="z-10 fixed p-8 mb-4">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <div id="content" class="flex w-full min-h-screen items-center">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <style>
 #app {
   @apply font-sans text-center text-gray-900 antialiased;
-}
-
-#nav {
-  @apply p-2 m-8;
 }
 
 #nav a {
