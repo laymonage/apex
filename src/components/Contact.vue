@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-gray-400 rounded bg-white p-8
+  <div class="rounded bg-white p-8
   flex-col xl:w-3/4 w-full mx-auto shadow-md">
     <div class="mb-8">
       <div class="flex items-end text-left text-blue-700 font-bold text-xl mb-2">
