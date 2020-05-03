@@ -38,10 +38,7 @@ import LinkedInAlt from '@/assets/svg/vue-unicons/linkedin-alt.svg';
 import TwitterAlt from '@/assets/svg/vue-unicons/twitter-alt.svg';
 
 export default Vue.extend({
-  name: 'HelloWorld',
-  props: {
-    msg: String,
-  },
+  name: 'Contact',
   components: {
     GitHubAlt,
     LinkedInAlt,
