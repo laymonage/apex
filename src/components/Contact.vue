@@ -1,23 +1,30 @@
 <template>
   <div class="container mx-auto px-4">
-    <div class="border border-gray-400 rounded bg-white p-8 flex-col w-full lg:w-3/4 mx-auto">
+    <div class="border border-gray-400 rounded bg-white p-8
+    flex-col xl:w-3/4 w-full mx-auto shadow-md">
       <div class="mb-8">
-        <div class="text-left text-gray-900 font-bold text-xl mb-2">
+        <div class="flex items-end text-left text-blue-700 font-bold text-xl mb-2">
           Sage M. Abdullah
+          <div class="font-normal text-lg xs:text-right">
+            <span class="text-gray-500 ml-2">a.k.a. </span>
+            <span>laymonage</span>
+          </div>
         </div>
         <p class="text-gray-700 text-left">
-          Computer Science student at Universitas Indonesia.
+          <span class="font-semibold">Computer Science</span>
+          student at Universitas Indonesia
+          and an <span class="font-semibold">open source</span> enthusiast.
         </p>
       </div>
       <div class="flex items-center">
-        <a href="https://github.com/laymonage" class="fill-current text-blue-700">
-          <GitHubAlt class="w-6 h-6" />
+        <a href="https://github.com/laymonage">
+          <GitHubAlt class="social-icon" />
         </a>
-        <a href="https://linkedin.com/in/laymonage" class="fill-current text-blue-700">
-          <LinkedInAlt class="w-6 h-6 ml-3" />
+        <a href="https://linkedin.com/in/laymonage">
+          <LinkedInAlt class="social-icon" />
         </a>
-        <a href="https://twitter.com/laymonage" class="fill-current text-blue-700">
-          <TwitterAlt class="w-6 h-6 ml-3" />
+        <a href="https://twitter.com/laymonage">
+          <TwitterAlt class="social-icon" />
         </a>
       </div>
     </div>
@@ -44,4 +51,7 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.social-icon {
+  @apply fill-current text-blue-700 w-6 h-6 mr-3;
+}
 </style>
