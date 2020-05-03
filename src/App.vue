@@ -2,7 +2,7 @@
   <div id="app" class="flex flex-col items-center">
     <div id="nav" class="z-10 fixed p-8 mb-4">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/profile">Profile</router-link>
     </div>
     <div id="content" class="flex w-full min-h-screen items-center">
       <router-view/>
