@@ -1,15 +1,13 @@
 <template>
   <div class="rounded bg-white p-8
   flex-col xl:w-5/6 w-full mx-auto shadow-md">
-    <div>
-      <div class="flex items-baseline xs:items-center
-      text-left text-blue-700 font-bold mb-2
-      md:text-5xl text-4xl">
-        laymonage
-        <div class="font-normal md:text-3xl text-2xl xs:text-right">
-          <span class="text-gray-500 ml-4 mr-2">is</span>
-          <span>Sage M. Abdullah</span>
-        </div>
+    <div class="flex items-baseline xs:items-center
+    text-left text-blue-700 font-bold mb-2
+    md:text-5xl text-4xl">
+      laymonage
+      <div class="font-normal md:text-3xl text-2xl xs:text-right">
+        <span class="text-gray-500 ml-4 mr-2">is</span>
+        <span>Sage M. Abdullah</span>
       </div>
     </div>
     <div class="text-gray-700 text-left text-2xl mt-6 mb-8">
