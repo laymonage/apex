@@ -3,13 +3,25 @@
   flex-col xl:w-11/12 w-full mx-auto shadow-md">
     <div class="flex items-baseline xs:items-center
     text-left text-blue-700 mb-8
-    md:text-5xl text-4xl">
+    text-5xl ph:text-4xl">
       Education
     </div>
-    <div class="flex text-gray-700">
-      <div class="flex flex-col items-start text-left w-9/12 lg:mr-8 mr-8">
+    <div class="flex flex-col md:flex-row-reverse text-gray-700">
+      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12">
+        <div class="mb-4">
+          <img
+            alt="Faculty of Computer Science, Universitas Indonesia"
+            src="../assets/img/csui_horizontal_transparent_english.png"
+            class="w-3/4 ph:w-full md:w-full mx-auto">
+        </div>
+        <div class="flex items-center">
+          <span>Jun 2017</span><span class="md:mx-1">-</span><span>Aug 2021</span>
+        </div>
+        <span>(expected)</span>
+      </div>
+      <div class="flex flex-col items-start text-left md:w-9/12 md:mr-8">
         <div class="flex flex-col mb-8">
-          <div class="flex flex-col text-xl">
+          <div class="flex flex-col text-xl ph:text-lg">
             <span class="font-semibold">Computer Science Undergraduate</span>
             <span>Universitas Indonesia</span>
           </div>
@@ -27,20 +39,6 @@
             Natural Language Processing, Image Processing, Data Science and Analytics.
           </span>
         </div>
-      </div>
-      <div class="flex flex-col items-center w-3/12">
-        <div class="mb-4">
-          <img
-            alt="Faculty of Computer Science, Universitas Indonesia"
-            src="../assets/img/csui_horizontal_transparent_english.png" class="md:block hidden">
-          <img
-            alt="Faculty of Computer Science, Universitas Indonesia"
-            src="../assets/img/csui_vertical_english.png" class="md:hidden block">
-        </div>
-        <div class="flex items-center">
-          <span>Jun 2017</span><span class="lg:mx-1">-</span><span>Aug 2021</span>
-        </div>
-        <span>(expected)</span>
       </div>
     </div>
   </div>
