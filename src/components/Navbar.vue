@@ -16,18 +16,6 @@
 import Vue from 'vue';
 import Logo from '@/assets/svg/laymonage/logo.svg';
 
-function onScroll() {
-  const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScrollPosition < 0) {
-    return;
-  }
-  if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-    return;
-  }
-  this.showNavbar = currentScrollPosition < this.lastScrollPosition;
-  this.lastScrollPosition = currentScrollPosition;
-}
-
 export default Vue.extend({
   name: 'Navbar',
   components: {
@@ -46,7 +34,17 @@ export default Vue.extend({
     window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
-    onScroll,
+    onScroll() {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScrollPosition < 0) {
+        return;
+      }
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return;
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = currentScrollPosition;
+    },
   },
 });
 </script>
