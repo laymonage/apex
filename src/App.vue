@@ -12,7 +12,7 @@
 
 <style>
 #app {
-  @apply font-sans text-center text-gray-900 antialiased;
+  @apply font-sans text-gray-900 antialiased;
 }
 
 @media (max-height: 540px) {
