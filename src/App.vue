@@ -1,31 +1,26 @@
 <template>
   <div id="app" class="flex flex-col items-center">
-    <div id="nav" class="z-10 md:fixed p-8 mb-4">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/profile">Profile</router-link>
-    </div>
+    <Navbar />
     <div id="content" class="flex w-full min-h-screen items-center">
       <router-view/>
     </div>
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue';
+import Navbar from '@/components/Navbar.vue';
+
+export default Vue.extend({
+  name: 'App',
+  components: {
+    Navbar,
+  },
+});
+</script>
+
 <style>
 #app {
   @apply font-sans text-gray-900 antialiased;
-}
-
-@media (max-height: 540px) {
-  #nav {
-    position: initial;
-  }
-}
-
-#nav a {
-  @apply font-bold text-blue-900;
-}
-
-#nav a.router-link-exact-active {
-  @apply text-blue-700;
 }
 </style>
