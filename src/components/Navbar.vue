@@ -1,15 +1,20 @@
 <template>
-  <div
-    class="flex navbar z-10 fixed p-4 bg-white shadow-md
+  <header
+    class="flex items-center justify-between navbar z-10 fixed
+    px-4 py-3 w-full bg-white shadow-md
     transition-all duration-300 ease-out"
     :class="{ 'navbar-hidden': !showNavbar }">
-    <router-link to="/">Home</router-link>
-    <router-link class="ml-4" to="/profile">Profile</router-link>
-  </div>
+    <Logo class="w-10 h-10" />
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link class="ml-4" to="/profile">Profile</router-link>
+    </nav>
+  </header>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Logo from '@/assets/svg/laymonage/logo.svg';
 
 function onScroll() {
   const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -25,7 +30,9 @@ function onScroll() {
 
 export default Vue.extend({
   name: 'Navbar',
-  components: {},
+  components: {
+    Logo,
+  },
   data() {
     return {
       showNavbar: true,
