@@ -11,7 +11,7 @@
           <img
             alt="Faculty of Computer Science, Universitas Indonesia"
             src="../assets/img/csui_horizontal_transparent_english.png"
-            class="w-3/4 ph:w-full md:w-full mx-auto">
+            class="w-1/2 ph:w-3/4 md:w-full mx-auto">
         </div>
         <div class="flex items-center">
           <span>Jun 2017</span><span class="mx-1">-</span><span>Aug 2021</span>
