@@ -5,111 +5,28 @@
       Work Experiences
     </template>
 
-    <div class="flex flex-col md:flex-row-reverse text-gray-700">
-      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4">
+    <div
+      v-for="(exp, expIndex) in workExperiences.data"
+      v-bind:key="`exp-${expIndex}`"
+      class="flex flex-col md:flex-row-reverse justify-between text-gray-700">
+      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12">
         <div class="mb-4 md:mb-2">
           <img
-            alt="Faculty of Computer Science, Universitas Indonesia"
-            src="../assets/img/csui_horizontal_transparent_english.png"
-            class="w-1/2 ph:w-3/4 md:w-3/4 lg:w-1/2 mx-auto">
+            :alt="exp.employer"
+            :src="exp.employerLogo.image"
+            :class="exp.employerLogo.class"
+            class="w-1/2 ph:w-3/4 md:w-auto mx-auto">
         </div>
         <div class="flex items-center">
-          <span>Aug 2018</span><span class="mx-1">-</span><span>present</span>
-        </div>
-        <div class="hidden md:flex w-1/4 h-full">
-          <div class="border-l border-solid border-4 mx-auto my-2"></div>
-        </div>
-      </div>
-      <div class="flex flex-col items-start md:w-3/4 md:mr-8 md:mb-8">
-        <div class="flex flex-col">
-          <div class="flex flex-col text-xl ph:text-lg">
-            <span class="font-semibold">Teaching Assistant</span>
-            <span>Faculty of Computer Science, Universitas Indonesia</span>
-          </div>
-        </div>
-        <div class="flex flex-col mt-4">
-          <span>
-            Tutored students, designed problem sets, and graded student
-            assignments in four different courses.
+          <span>{{ exp.dates.start }}</span>
+          <span v-if="exp.dates.end !== exp.dates.start">
+            <span class="mx-1">-</span>
+            <span>{{ exp.dates.end }}</span>
           </span>
-          <ul class="list-decimal font-semibold ml-6 p-2">
-            <li>
-              <div class="flex flex-col">
-                <span>
-                  Programming Foundations I
-                </span>
-                <span class="font-normal">
-                  Programming basics, OOP basics, and GUI basics in Python.
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="flex flex-col">
-                <span>
-                  Introduction to Computer Organization
-                </span>
-                <span class="font-normal">
-                  MIPS & AVR architecture and emulated devices (LCD, buttons, keypad).
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="flex flex-col">
-                <span>
-                  Web Design and Programming
-                </span>
-                <span class="font-normal">
-                  Django (with test-driven development), JQuery, Bootstrap, GitLab CI, and Heroku.
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="flex flex-col">
-                <span>
-                  Programming Foundations II
-                </span>
-                <span class="font-normal">
-                OOP with Java, GUI with JavaFX, basic web programming with Spring Boot.
-                </span>
-                <div class="flex flex-col font-normal">
-                  <span>Additional work as a coordinator:</span>
-                  <ul class="list-disc ml-8">
-                    <li>
-                      Worked with two other coordinators to manage a team of
-                      28 teaching assistants.
-                    </li>
-                    <li>
-                      Reviewed and created grading schemes for weekly lab assignments
-                      given out to 400+ students.
-                    </li>
-                    <li>
-                      Built an automatic submission checking system using
-                      JUnit, Gradle, and GitLab CI.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
-      </div>
-      <div class="block md:hidden w-full">
-        <div class="border-b border-solid border mx-auto my-16"></div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row-reverse text-gray-700">
-      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4">
-        <div class="mb-4 md:mb-2">
-          <img
-            alt="Faculty of Computer Science, Universitas Indonesia"
-            src="../assets/img/csui_horizontal_transparent_english.png"
-            class="w-1/2 ph:w-3/4 md:w-3/4 lg:w-1/2 mx-auto">
-        </div>
-        <div class="flex items-center">
-          <span>Jan 2020</span>
-        </div>
-        <div class="hidden md:flex w-1/4 h-full">
+        <div
+          v-if="expIndex !== workExperiences.data.length - 1"
+          class="hidden md:flex w-1/4 h-full">
           <div class="border-l border-solid border-4 mx-auto my-2"></div>
         </div>
       </div>
@@ -117,137 +34,36 @@
         <div class="flex flex-col">
           <div class="flex flex-col text-xl ph:text-lg">
             <span>
-              <span class="font-semibold">Web Developer</span>
+              <span v-html="sanitize(marked(exp.title))"></span>
             </span>
-            <span>Faculty of Computer Science, Universitas Indonesia</span>
+            <span>{{ exp.employer }}</span>
           </div>
         </div>
         <div class="flex flex-col mt-4">
           <span>
-            Improved and added new features to a room reservation system.
+            {{ exp.description }}
           </span>
-          <ul class="list-disc ml-6 p-2">
-            <li>
-              Upgraded the stack from Django 1.9.5 and Python 2.7 to
-              Django 3.0.2 and Python 3.8.
+          <component
+            v-if="exp.details"
+            :is="exp.details.type === 'decimal' ? 'ol' : 'ul'"
+            :class="
+              exp.details.type === 'decimal' ? 'list-decimal' :
+              exp.details.type === 'disc' ? 'list-disc' :
+              'list-none'
+            "
+            class="ml-6 p-2">
+            <li
+              v-for="(child, childIndex) in exp.details.children"
+              v-bind:key="`exp-${expIndex}-${childIndex}`"
+              v-html="sanitize(marked(child))">
             </li>
-            <li>
-              Optimized some of the database queries, resulting in more than 10x
-              performance increase to certain pages.
-            </li>
-            <li>
-              Fixed multiple bugs and security vulnerabilities found in the system.
-            </li>
-            <li>
-              Added new features to enhance the user experience.
-            </li>
-          </ul>
+          </component>
         </div>
       </div>
-      <div class="block md:hidden w-full">
+      <div
+        v-if="expIndex !== workExperiences.data.length - 1"
+        class="block md:hidden w-full">
         <div class="border-b border-solid border mx-auto my-16"></div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row-reverse text-gray-700">
-      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4">
-        <div class="mb-4 md:mb-0">
-          <img
-            alt="Google Summer of Code"
-            src="../assets/img/gsoc.png"
-            class="w-1/2 ph:w-3/4 md:w-3/4 lg:w-1/2 mx-auto">
-        </div>
-        <div class="flex items-center">
-          <span>May 2019</span><span class="mx-1">-</span><span>Aug 2019</span>
-        </div>
-        <div class="hidden md:flex w-1/4 h-full">
-          <div class="border-l border-solid border-4 mx-auto my-2"></div>
-        </div>
-      </div>
-      <div class="flex flex-col items-start md:w-3/4 md:mr-8 md:mb-8">
-        <div class="flex flex-col">
-          <div class="flex flex-col text-xl ph:text-lg">
-            <span>
-              <span class="font-semibold">Student</span> with
-              <span class="font-semibold">Django Software Foundation</span>
-            </span>
-            <span>Google Summer of Code 2019</span>
-          </div>
-        </div>
-        <div class="flex flex-col mt-4">
-          <span>
-            Participated in the annual open source software development program
-            held by Google.
-          </span>
-          <ul class="list-disc ml-6 p-2">
-            <li>
-              Added a new
-              <a
-                class="link"
-                :href="
-                'https://docs.djangoproject.com/en/dev/ref/models/fields/' +
-                '#django.db.models.JSONField'">
-                JSONField
-              </a>
-              that can be used for all database backends supported by Django
-              (PostgreSQL, MySQL, MariaDB, SQLite, and Oracle Database).
-            </li>
-            <li>
-                Identified and provided an initial patch for
-                <a
-                  class="link"
-                  :href="
-                  'https://www.djangoproject.com/weblog/2019/aug/01/security-releases/' +
-                  '#s-cve-2019-14234-sql-injection-possibility-in-key-and-index-lookups-' +
-                  'for-jsonfield-hstorefield'">
-                  a security vulnerability
-                </a>
-                in Django.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="block md:hidden w-full">
-        <div class="border-b border-solid border mx-auto my-16"></div>
-      </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row-reverse text-gray-700">
-      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4">
-        <div class="mb-4 md:mb-2">
-          <img
-            alt="Wikimedia Indonesia"
-            src="../assets/img/wikimedia_id.png"
-            class="w-1/2 ph:w-3/4 md:w-3/4 lg:w-1/2 mx-auto px-4 py-1">
-        </div>
-        <div class="flex items-center">
-          <span>July 2018</span>
-        </div>
-      </div>
-      <div class="flex flex-col items-start md:w-3/4 md:mr-8">
-        <div class="flex flex-col">
-          <div class="flex flex-col text-xl ph:text-lg">
-            <span>
-              <span class="font-semibold">Technical Staff Intern</span>
-            </span>
-            <span>Wikimedia Indonesia</span>
-          </div>
-        </div>
-        <div class="flex flex-col mt-4">
-          <span>
-            Set up a local server to host applications internally
-            and instructed the employees on how to use them.
-          </span>
-          <ul class="list-disc ml-6 p-2">
-            <li>
-              Deployed a financial software used by the accountants.
-            </li>
-            <li>
-              Localized and deployed a NodeJS application to manage employees'
-              annual leave.
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
 
@@ -256,15 +72,39 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import marked from 'marked';
+import { sanitize } from 'dompurify';
+import workExperiences from '@/data/work-experiences';
 
 export default Vue.extend({
   name: 'WorkExperiences',
   components: {},
+  data() {
+    return {
+      workExperiences,
+    };
+  },
+  methods: {
+    marked,
+    sanitize,
+  },
 });
 </script>
 
 <style scoped>
-.link {
+ul >>> a {
   @apply font-semibold text-blue-700;
+}
+
+ol.list-decimal >>> ul {
+  @apply list-disc ml-8;
+}
+
+ol.list-decimal {
+  @apply font-semibold;
+}
+
+ol.list-decimal >>> p, ol.list-decimal >>> ul {
+  @apply font-normal;
 }
 </style>
