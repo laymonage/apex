@@ -4,7 +4,9 @@
       v-for="(item, itemIndex) in items"
       v-bind:key="`item-${itemIndex}`"
       class="flex flex-col md:flex-row-reverse justify-between text-gray-700">
-      <div class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12">
+      <div
+        class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12"
+        :class="items.length > 1 ? 'lg:w-2/12' : ''">
         <div class="mb-4 md:mb-2">
           <img
             :alt="item.institution"
@@ -19,6 +21,7 @@
             <span>{{ item.dates.end }}</span>
           </span>
         </div>
+        <span v-if="item.dates.expected">(expected)</span>
         <div
           v-if="itemIndex !== items.length - 1"
           class="hidden md:flex w-1/4 h-full">
@@ -33,6 +36,9 @@
             </span>
             <span>{{ item.institution }}</span>
           </div>
+          <div v-if="item.subtitle" class="mt-2">
+            <span v-html="sanitize(marked(item.subtitle))" />
+          </div>
         </div>
         <div class="flex flex-col mt-4">
           <span>
@@ -42,11 +48,13 @@
             v-if="item.details"
             :is="item.details.type === 'decimal' ? 'ol' : 'ul'"
             :class="
-              item.details.type === 'decimal' ? 'list-decimal' :
-              item.details.type === 'disc' ? 'list-disc' :
-              'list-none'
-            "
-            class="ml-6 p-2">
+              (
+                item.details.type === 'decimal' ? 'list-decimal' :
+                item.details.type === 'disc' ? 'list-disc' :
+                'list-none'
+              )
+              + (item.details.indented !== false ? ' ml-6 p-2' : '')
+            ">
             <li
               v-for="(child, childIndex) in item.details.children"
               v-bind:key="`item-${itemIndex}-${childIndex}`"
