@@ -21,7 +21,7 @@
         :href="link.url">
         <component
           :is="link.icon"
-          :class="index > 0 ? 'ml-3' : ''"
+          :class="{'ml-3': index > 0}"
           class="fill-current text-blue-700 w-6 h-6" />
       </a>
     </div>

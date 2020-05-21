@@ -6,7 +6,7 @@
       class="flex flex-col md:flex-row-reverse justify-between text-gray-700">
       <div
         class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12"
-        :class="items.length > 1 ? 'lg:w-2/12' : ''">
+        :class="{'lg:w-2/12': items.length > 1}">
         <div class="mb-4 md:mb-2">
           <img
             :alt="item.institution"
@@ -48,12 +48,11 @@
             v-if="item.details"
             :is="item.details.type === 'decimal' ? 'ol' : 'ul'"
             :class="
-              (
+              [
                 item.details.type === 'decimal' ? 'list-decimal' :
                 item.details.type === 'disc' ? 'list-disc' :
-                'list-none'
-              )
-              + (item.details.indented !== false ? ' ml-6 p-2' : '')
+                'list-none',
+                item.details.indented !== false ? ' ml-6 p-2' : '']
             ">
             <li
               v-for="(child, childIndex) in item.details.children"

@@ -82,7 +82,7 @@ Additional work as a coordinator:
       institution: 'Google Summer of Code 2019',
       institutionLogo: {
         image: gsoc,
-        class: 'ph:px-0 px-4 -mb-4 md:-mb-2',
+        class: ['ph:px-0', 'px-4', '-mb-4', 'md:-mb-2'],
       },
       description: `Participated in the annual open source software development program
       held by Google.`,
@@ -112,7 +112,7 @@ in Django.`,
       institution: 'Wikimedia Indonesia',
       institutionLogo: {
         image: wmid,
-        class: 'ph:px-6 px-10',
+        class: ['ph:px-6', 'px-10'],
       },
       description: `Set up a local server to host applications internally and
       instructed the employees on how to use them.`,

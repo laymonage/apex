@@ -20,8 +20,8 @@ export default Vue.extend({
   name: 'BaseCard',
   props: {
     headerClass: {
-      type: String,
-      default: 'flex flex-col sm:flex-row items-baseline',
+      type: Array,
+      default: () => ['flex', 'flex-col', 'sm:flex-row', 'items-baseline'],
     },
   },
 });
