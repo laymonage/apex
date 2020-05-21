@@ -7,8 +7,8 @@ export default {
     {
       id: 0,
       title: '**Teaching Assistant**',
-      employer: 'Faculty of Computer Science, Universitas Indonesia',
-      employerLogo: {
+      institution: 'Faculty of Computer Science, Universitas Indonesia',
+      institutionLogo: {
         image: csui,
       },
       description: `
@@ -55,8 +55,8 @@ Additional work as a coordinator:
     {
       id: 3,
       title: '**Web Developer**',
-      employer: 'Faculty of Computer Science, Universitas Indonesia',
-      employerLogo: {
+      institution: 'Faculty of Computer Science, Universitas Indonesia',
+      institutionLogo: {
         image: csui,
       },
       description: 'Improved and added new features to a room reservation system.',
@@ -79,8 +79,8 @@ Additional work as a coordinator:
     {
       id: 2,
       title: '**Student** with **Django Software Foundation**',
-      employer: 'Google Summer of Code 2019',
-      employerLogo: {
+      institution: 'Google Summer of Code 2019',
+      institutionLogo: {
         image: gsoc,
         class: 'ph:px-0 px-4 -mb-4 md:-mb-2',
       },
@@ -109,8 +109,8 @@ in Django.`,
     {
       id: 1,
       title: '**Technical Staff Intern**',
-      employer: 'Wikimedia Indonesia',
-      employerLogo: {
+      institution: 'Wikimedia Indonesia',
+      institutionLogo: {
         image: wmid,
         class: 'ph:px-6 px-10',
       },
