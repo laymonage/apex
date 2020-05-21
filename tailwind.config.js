@@ -1,6 +1,7 @@
 module.exports = {
   purge: [
     './src/**/*.vue',
+    './src/**/*.ts',
   ],
   theme: {
     extend: {
