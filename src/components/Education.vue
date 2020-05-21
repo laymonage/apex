@@ -1,9 +1,10 @@
 <template>
   <BaseCard>
-    <div class="flex items-baseline xs:items-center
-    text-blue-700 mb-8 text-5xl ph:text-4xl">
+
+    <template v-slot:header>
       Education
-    </div>
+    </template>
+
     <div class="flex flex-col md:flex-row-reverse text-gray-700">
       <div class="flex flex-col items-center mb-8 md:mb-0 md:w-1/4">
         <div class="mb-4">
@@ -37,6 +38,7 @@
         </div>
       </div>
     </div>
+
   </BaseCard>
 </template>
 

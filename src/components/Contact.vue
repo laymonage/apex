@@ -1,15 +1,16 @@
 <template>
   <BaseCard>
-    <div class="flex flex-col sm:flex-row items-baseline
-    text-left text-blue-700 font-bold mb-2
-    md:text-5xl text-4xl">
-      laymonage
-      <div class="font-normal md:text-3xl text-2xl ph:text-xl">
-        <span class="text-gray-500 sm:ml-4 mr-2">is</span>
-        <span>Sage M. Abdullah</span>
-      </div>
-    </div>
-    <div class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mt-6 mb-8">
+
+    <template v-slot:header>
+      <span class="font-bold">laymonage</span>
+    </template>
+
+    <template v-slot:subtitle>
+      <span class="text-gray-500 sm:ml-4 mr-2">is</span>
+      <span>Sage M. Abdullah</span>
+    </template>
+
+    <div class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mb-8">
       <span class="font-semibold">Computer Science</span>
       student at Universitas Indonesia
       and an <span class="font-semibold">open source</span> enthusiast.
@@ -25,6 +26,7 @@
         <TwitterAlt class="social-icon" />
       </a>
     </div>
+
   </BaseCard>
 </template>
 
