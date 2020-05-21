@@ -10,7 +10,7 @@
         <span>Sage M. Abdullah</span>
       </div>
     </div>
-    <div class="text-gray-700 text-left text-2xl ph:text-xl mt-6 mb-8">
+    <div class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mt-6 mb-8">
       <span class="font-semibold">Computer Science</span>
       student at Universitas Indonesia
       and an <span class="font-semibold">open source</span> enthusiast.
