@@ -2,28 +2,27 @@
   <BaseCard>
 
     <template v-slot:header>
-      <span class="font-bold">laymonage</span>
+      <strong>{{ contact.alias }}</strong>
     </template>
 
     <template v-slot:subtitle>
       <span class="text-gray-500 sm:ml-4 mr-2">is</span>
-      <span>Sage M. Abdullah</span>
+      <span>{{ contact.name }}</span>
     </template>
 
-    <div class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mb-8">
-      <span class="font-semibold">Computer Science</span>
-      student at Universitas Indonesia
-      and an <span class="font-semibold">open source</span> enthusiast.
+    <div
+      v-html="sanitize(marked(contact.description))"
+      class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mb-8">
     </div>
     <div class="flex items-center">
-      <a href="https://github.com/laymonage">
-        <GitHubAlt class="social-icon" />
-      </a>
-      <a href="https://linkedin.com/in/laymonage">
-        <LinkedInAlt class="social-icon" />
-      </a>
-      <a href="https://twitter.com/laymonage">
-        <TwitterAlt class="social-icon" />
+      <a
+        v-for="(link, index) in contact.links"
+        v-bind:key="index"
+        :href="link.url">
+        <component
+          :is="link.icon"
+          :class="index > 0 ? 'ml-3' : ''"
+          class="fill-current text-blue-700 w-6 h-6" />
       </a>
     </div>
 
@@ -32,22 +31,24 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import GitHubAlt from '@/assets/svg/vue-unicons/github-alt.svg';
-import LinkedInAlt from '@/assets/svg/vue-unicons/linkedin-alt.svg';
-import TwitterAlt from '@/assets/svg/vue-unicons/twitter-alt.svg';
+import marked from 'marked';
+import { sanitize } from 'dompurify';
+import Contact from '@/data/contact';
 
 export default Vue.extend({
   name: 'Contact',
-  components: {
-    GitHubAlt,
-    LinkedInAlt,
-    TwitterAlt,
+  components: {},
+  data() {
+    return {
+      contact: Contact,
+    };
+  },
+  methods: {
+    marked,
+    sanitize,
   },
 });
 </script>
 
 <style scoped>
-.social-icon {
-  @apply fill-current text-blue-700 w-6 h-6 mr-3;
-}
 </style>
