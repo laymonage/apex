@@ -1,8 +1,8 @@
 <template>
-  <div class="container mx-auto px-4 my-32 items-center">
+  <BaseContainer class="my-32">
     <Education />
     <WorkExperiences class="mt-16" />
-  </div>
+  </BaseContainer>
 </template>
 
 <script>

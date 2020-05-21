@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto px-4 items-center">
+  <BaseContainer>
     <Contact />
-  </div>
+  </BaseContainer>
 </template>
 
 <script>
