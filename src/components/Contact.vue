@@ -1,6 +1,5 @@
 <template>
-  <div class="rounded bg-white p-8
-  flex-col xl:w-11/12 w-full mx-auto shadow-md">
+  <BaseCard>
     <div class="flex flex-col sm:flex-row items-baseline
     text-left text-blue-700 font-bold mb-2
     md:text-5xl text-4xl">
@@ -26,7 +25,7 @@
         <TwitterAlt class="social-icon" />
       </a>
     </div>
-  </div>
+  </BaseCard>
 </template>
 
 <script lang="ts">

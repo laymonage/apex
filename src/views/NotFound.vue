@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4 items-center">
-    <div class="w-fit rounded bg-white p-8 flex-col mx-auto shadow-md">
+    <BaseCard class="w-fit">
       <div class="flex items-baseline text-blue-700 font-bold mb-2 md:text-5xl text-4xl">
         404
         <div class="font-normal md:text-3xl text-2xl ph:text-xl">
@@ -15,7 +15,7 @@
           to go back to the homepage.
         </span>
       </div>
-    </div>
+    </BaseCard>
   </div>
 </template>
 

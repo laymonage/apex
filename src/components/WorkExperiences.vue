@@ -1,6 +1,5 @@
 <template>
-  <div class="rounded bg-white p-8
-  flex-col xl:w-11/12 w-full mx-auto shadow-md">
+  <BaseCard>
     <div class="flex items-baseline xs:items-center
     text-blue-700 mb-8
     text-5xl ph:text-4xl">
@@ -253,7 +252,7 @@
       </div>
     </div>
 
-  </div>
+  </BaseCard>
 </template>
 
 <script lang="ts">
