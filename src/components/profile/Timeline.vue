@@ -8,11 +8,14 @@
         class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12"
         :class="{'lg:w-2/12': items.length > 1}">
         <div class="mb-4 md:mb-2">
-          <img
-            :alt="item.institution"
-            :src="item.institutionLogo.image"
-            :class="item.institutionLogo.class"
-            class="w-1/2 ph:w-3/4 md:w-auto mx-auto">
+          <a :href="item.institutionLogo.url">
+            <img
+              v-if="typeof item.institutionLogo.image === 'string'"
+              :alt="item.institution"
+              :src="item.institutionLogo.image"
+              :class="item.institutionLogo.class"
+              class="w-1/2 ph:w-3/4 md:w-auto mx-auto" />
+          </a>
         </div>
         <div class="flex items-center">
           <span>{{ item.dates.start }}</span>

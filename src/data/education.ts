@@ -8,6 +8,7 @@ export default {
       institution: 'Universitas Indonesia',
       institutionLogo: {
         image: csui,
+        url: 'https://ui.ac.id/en',
       },
       subtitle: '**3.93/4.00 CGPA**',
       description: 'Relevant courses taken:',

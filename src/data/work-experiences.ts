@@ -10,6 +10,7 @@ export default {
       institution: 'Faculty of Computer Science, Universitas Indonesia',
       institutionLogo: {
         image: csui,
+        url: 'https://cs.ui.ac.id',
       },
       description: `
         Tutored students, designed problem sets, and graded student assignments
@@ -58,6 +59,7 @@ Additional work as a coordinator:
       institution: 'Faculty of Computer Science, Universitas Indonesia',
       institutionLogo: {
         image: csui,
+        url: 'https://cs.ui.ac.id',
       },
       description: 'Improved and added new features to a room reservation system.',
       dates: {
@@ -83,6 +85,7 @@ Additional work as a coordinator:
       institutionLogo: {
         image: gsoc,
         class: ['ph:px-0', 'px-4', '-mb-4', 'md:-mb-2'],
+        url: 'https://g.co/gsoc',
       },
       description: `Participated in the annual open source software development program
       held by Google.`,
@@ -113,6 +116,7 @@ in Django.`,
       institutionLogo: {
         image: wmid,
         class: ['ph:px-6', 'px-10'],
+        url: 'https://wikimedia.or.id',
       },
       description: `Set up a local server to host applications internally and
       instructed the employees on how to use them.`,
