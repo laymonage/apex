@@ -47,13 +47,11 @@
           <component
             v-if="item.details"
             :is="item.details.type === 'decimal' ? 'ol' : 'ul'"
-            :class="
-              [
-                item.details.type === 'decimal' ? 'list-decimal' :
-                item.details.type === 'disc' ? 'list-disc' :
-                'list-none',
-                item.details.indented !== false ? ' ml-6 p-2' : '']
-            ">
+            :class="{
+              'list-decimal': item.details.type === 'decimal',
+              'list-disc': item.details.type === 'disc',
+              'ml-6 p-2': item.details.indented !== false
+            }">
             <li
               v-for="(child, childIndex) in item.details.children"
               v-bind:key="`item-${itemIndex}-${childIndex}`"
