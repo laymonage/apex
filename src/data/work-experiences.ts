@@ -1,6 +1,6 @@
 import csui from '@/assets/img/csui_horizontal_transparent_english.png';
 import gsoc from '@/assets/img/gsoc.png';
-import wmid from '@/assets/img/wikimedia_id.png';
+import wmid from '@/assets/svg/others/wmid.svg';
 
 export default {
   data: [
@@ -115,7 +115,6 @@ in Django.`,
       institution: 'Wikimedia Indonesia',
       institutionLogo: {
         image: wmid,
-        class: ['ph:px-6', 'px-10'],
         url: 'https://wikimedia.or.id',
       },
       description: `Set up a local server to host applications internally and

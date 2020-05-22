@@ -1,4 +1,4 @@
-import csui from '@/assets/img/csui_horizontal_transparent_english.png';
+import ui from '@/assets/svg/others/ui.svg';
 
 export default {
   data: [
@@ -7,7 +7,7 @@ export default {
       title: '**Computer Science Undergraduate**',
       institution: 'Universitas Indonesia',
       institutionLogo: {
-        image: csui,
+        image: ui,
         url: 'https://ui.ac.id/en',
       },
       subtitle: '**3.93/4.00 CGPA**',
