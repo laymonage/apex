@@ -17,7 +17,7 @@ import Vue from 'vue';
 import Logo from '@/assets/svg/laymonage/logo.svg';
 
 export default Vue.extend({
-  name: 'Navbar',
+  name: 'TheNavbar',
   components: {
     Logo,
   },

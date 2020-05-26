@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Education from '@/components/Education.vue';
-import WorkExperiences from '@/components/WorkExperiences.vue';
+import Education from '@/components/profile/Education.vue';
+import WorkExperiences from '@/components/profile/WorkExperiences.vue';
 
 export default {
   name: 'Profile',

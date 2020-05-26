@@ -82,7 +82,7 @@ import marked from 'marked';
 import { sanitize } from 'dompurify';
 
 export default Vue.extend({
-  name: 'Timeline',
+  name: 'BaseTimeline',
   components: {},
   methods: {
     marked,

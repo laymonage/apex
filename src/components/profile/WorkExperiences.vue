@@ -5,20 +5,20 @@
       Work Experiences
     </template>
 
-    <Timeline :items="workExperiences" />
+    <BaseTimeline :items="workExperiences" />
 
   </BaseCard>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Timeline from '@/components/profile/Timeline.vue';
+import BaseTimeline from '@/components/base/BaseTimeline.vue';
 import WorkExperiences from '@/data/work-experiences';
 
 export default Vue.extend({
   name: 'WorkExperiences',
   components: {
-    Timeline,
+    BaseTimeline,
   },
   data() {
     return {

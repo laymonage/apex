@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="flex flex-col items-center">
-    <Navbar />
+    <TheNavbar />
     <div id="content" class="flex w-full min-h-screen items-center bg-gray-100">
       <router-view/>
     </div>
@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Navbar from '@/components/Navbar.vue';
+import TheNavbar from '@/components/base/TheNavbar.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    Navbar,
+    TheNavbar,
   },
 });
 </script>

@@ -5,20 +5,20 @@
       Education
     </template>
 
-    <Timeline :items="education" />
+    <BaseTimeline :items="education" />
 
   </BaseCard>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Timeline from '@/components/profile/Timeline.vue';
+import BaseTimeline from '@/components/base/BaseTimeline.vue';
 import Education from '@/data/education';
 
 export default Vue.extend({
   name: 'Education',
   components: {
-    Timeline,
+    BaseTimeline,
   },
   data() {
     return {
