@@ -94,7 +94,7 @@ export default Vue.extend({
 
 <style scoped>
 ul >>> a {
-  @apply font-semibold text-blue-700;
+  @apply text-blue-700;
 }
 
 ol.list-decimal >>> ul {
