@@ -4,6 +4,7 @@ import camelCase from 'lodash/camelCase';
 import App from './App.vue';
 import router from './router';
 import '@/assets/css/tailwind.css';
+import '@/assets/css/main.css';
 
 Vue.config.productionTip = process.env.node_env === 'production';
 
