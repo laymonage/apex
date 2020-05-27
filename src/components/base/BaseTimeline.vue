@@ -8,17 +8,11 @@
         class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12">
         <div class="mb-4 md:mb-2">
           <a :href="item.institutionLogo.url">
-            <img
-              v-if="typeof item.institutionLogo.image === 'string'"
-              :alt="item.institution"
-              :src="item.institutionLogo.image"
+            <BaseImage
+              :image="item.institutionLogo.image"
               :class="item.institutionLogo.class"
-              class="w-1/2 ph:w-3/4 md:w-auto mx-auto" />
-            <component
-              v-else
-              :is="item.institutionLogo.image"
-              :class="item.institutionLogo.class"
-              class="w-1/2 md:w-4/6 xl:w-7/12 mx-auto" />
+              :imgClass="['w-1/2', 'ph:w-3/4', 'md:w-auto', 'mx-auto']"
+              :componentClass="['w-1/2', 'md:w-4/6', 'xl:w-7/12', 'mx-auto']" />
           </a>
         </div>
         <div class="flex items-center">
