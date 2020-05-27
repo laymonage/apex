@@ -2,7 +2,7 @@
   <div class="rounded bg-white shadow-md flex-col
   w-full xl:w-11/12 mx-auto p-8">
     <div
-      class="text-blue-700 md:text-5xl text-4xl mb-8"
+      class="text-blue-700 md:text-5xl text-4xl mb-12"
       :class="headerClass">
       <slot name="header"></slot>
       <div class="md:text-3xl text-2xl ph:text-xl">

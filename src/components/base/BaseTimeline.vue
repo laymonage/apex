@@ -70,7 +70,7 @@
       <div
         v-if="itemIndex !== items.length - 1"
         class="block md:hidden w-full">
-        <div class="border-b border-solid border mx-auto my-16"></div>
+        <div class="border-b border-solid border mx-auto my-8"></div>
       </div>
     </li>
   </ol>
