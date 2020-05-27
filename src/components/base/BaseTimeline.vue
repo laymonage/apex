@@ -1,7 +1,7 @@
 <template>
   <ol>
     <li
-      v-for="item in items"
+      v-for="(item, itemIndex) in items"
       v-bind:key="item.id"
       class="flex flex-col md:flex-row-reverse justify-between text-gray-700">
       <div
@@ -45,20 +45,10 @@
           <span>
             {{ item.description }}
           </span>
-          <component
+          <BaseList
+            :list="item.details"
             v-if="item.details"
-            :is="item.details.type === 'decimal' ? 'ol' : 'ul'"
-            :class="{
-              'list-decimal': item.details.type === 'decimal',
-              'list-disc': item.details.type === 'disc',
-              'ml-6 p-2': item.details.indented !== false
-            }">
-            <li
-              v-for="(child, childIndex) in item.details.children"
-              v-bind:key="childIndex"
-              v-html="sanitize(marked(child))">
-            </li>
-          </component>
+            class="mt-2" />
         </div>
       </div>
       <div
