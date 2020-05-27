@@ -1,8 +1,8 @@
 <template>
   <ol>
     <li
-      v-for="(item, itemIndex) in items"
-      v-bind:key="`item-${itemIndex}`"
+      v-for="item in items"
+      v-bind:key="item.id"
       class="flex flex-col md:flex-row-reverse justify-between text-gray-700">
       <div
         class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12">
@@ -55,7 +55,7 @@
             }">
             <li
               v-for="(child, childIndex) in item.details.children"
-              v-bind:key="`item-${itemIndex}-${childIndex}`"
+              v-bind:key="childIndex"
               v-html="sanitize(marked(child))">
             </li>
           </component>
