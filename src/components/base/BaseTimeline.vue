@@ -77,10 +77,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-ul >>> a {
-  @apply text-blue-700;
-}
-
 ol.list-decimal >>> ul {
   @apply list-disc ml-8;
 }

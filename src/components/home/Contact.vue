@@ -22,7 +22,7 @@
         <component
           :is="link.icon"
           :class="{'ml-3': index > 0}"
-          class="fill-current text-blue-700 w-6 h-6" />
+          class="fill-current w-6 h-6" />
       </a>
     </div>
 

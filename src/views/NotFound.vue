@@ -19,7 +19,7 @@
           <span class="whitespace-no-wrap">:(</span>
         </span>
         <span class="mt-4">
-          <router-link class="text-blue-700" to="/">Click here</router-link>
+          <router-link to="/">Click here</router-link>
           to go back to the homepage.
         </span>
       </div>
