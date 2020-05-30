@@ -16,6 +16,12 @@
       >
         Profile
       </router-link>
+      <router-link
+        class="ml-4"
+        to="/projects"
+      >
+        Projects
+      </router-link>
     </nav>
   </header>
 </template>
