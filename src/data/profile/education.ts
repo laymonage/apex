@@ -1,4 +1,4 @@
-import ui from '@/assets/svg/others/ui.svg';
+import ui from '@/assets/img/profile/ui.svg';
 
 export const data = [
   {

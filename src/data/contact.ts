@@ -1,6 +1,6 @@
-import GitHubAlt from '@/assets/svg/vue-unicons/github-alt.svg';
-import LinkedInAlt from '@/assets/svg/vue-unicons/linkedin-alt.svg';
-import TwitterAlt from '@/assets/svg/vue-unicons/twitter-alt.svg';
+import GitHubAlt from '@/assets/img/vue-unicons/github-alt.svg';
+import LinkedInAlt from '@/assets/img/vue-unicons/linkedin-alt.svg';
+import TwitterAlt from '@/assets/img/vue-unicons/twitter-alt.svg';
 
 export default {
   alias: 'laymonage',

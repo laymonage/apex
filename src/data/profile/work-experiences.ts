@@ -1,6 +1,6 @@
-import csui from '@/assets/img/csui_horizontal_transparent_english.png';
-import gsoc from '@/assets/img/gsoc.png';
-import wmid from '@/assets/svg/others/wmid.svg';
+import csui from '@/assets/img/profile/csui_horizontal_transparent_english.png';
+import gsoc from '@/assets/img/profile/gsoc.png';
+import wmid from '@/assets/img/profile/wmid.svg';
 
 export const data = [
   {

@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Logo from '@/assets/svg/laymonage/logo.svg';
+import Logo from '@/assets/img/logo.svg';
 
 export default Vue.extend({
   name: 'TheNavbar',
