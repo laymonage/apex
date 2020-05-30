@@ -19,6 +19,10 @@ to learn modern JavaScript in front-end web development with NodeJS.
 
 In this case, [laymonage.com][laymonage].
 
+## License
+
+[MIT][license]
+
 [netlify-status]: https://api.netlify.com/api/v1/badges/6a4e031d-34b9-4646-93ee-b3acc8d7fbc9/deploy-status
 [netlify-deploys]: https://app.netlify.com/sites/laymonage/deploys
 [vue]: https://vuejs.org
@@ -26,3 +30,4 @@ In this case, [laymonage.com][laymonage].
 [tailwind]: https://tailwindcss.com
 [wiktionary]: https://en.wiktionary.org/wiki/apex
 [laymonage]: https://laymonage.com
+[license]: LICENSE
