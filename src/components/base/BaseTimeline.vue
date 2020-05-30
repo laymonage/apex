@@ -53,8 +53,7 @@
       </div>
       <div
         v-if="itemIndex !== items.length - 1"
-        class="block md:hidden w-full">
-        <div class="border-b border-solid border mx-auto my-8"></div>
+        class="block md:hidden w-full border mx-auto my-8">
       </div>
     </li>
   </ol>
