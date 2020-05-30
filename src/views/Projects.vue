@@ -12,18 +12,21 @@
         v-slot:default="slotProps"
         :items="projectGroup.data"
       >
-        <BaseShowcaseItem :item="slotProps.item" />
+        <ShowcaseItem :item="slotProps.item" />
       </BaseCatalog>
     </BaseCard>
   </BaseContainer>
 </template>
 
 <script>
+import ShowcaseItem from '@/components/ShowcaseItem.vue';
 import projects from '../data/projects';
 
 export default {
   name: 'Projects',
-  components: {},
+  components: {
+    ShowcaseItem,
+  },
   data() {
     return {
       projects,

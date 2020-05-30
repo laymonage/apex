@@ -13,7 +13,7 @@
         :items="profileGroup.data"
         :divider-class="['block', 'md:hidden']"
       >
-        <BaseTimelineItem
+        <TimelineItem
           :item="slotProps.item"
           :show-line="slotProps.itemIndex !== profileGroup.data.length - 1"
         />
@@ -23,10 +23,14 @@
 </template>
 
 <script>
+import TimelineItem from '@/components/TimelineItem.vue';
 import profile from '@/data/profile';
 
 export default {
   name: 'Profile',
+  components: {
+    TimelineItem,
+  },
   data() {
     return {
       profile,
