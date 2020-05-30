@@ -1,19 +1,27 @@
 <template>
   <BaseContainer class="my-32">
-    <Education />
-    <WorkExperiences class="mt-16" />
+    <BaseCard
+      v-for="(profileGroup, profileIndex) in profile.data"
+      v-bind:key="profileGroup.id"
+      :class="{'mt-16': profileIndex !== 0}">
+      <template v-slot:header>
+        {{ profileGroup.type }}
+      </template>
+      <BaseTimeline :items="profileGroup.data" />
+    </BaseCard>
   </BaseContainer>
 </template>
 
 <script>
-import Education from '@/components/profile/Education.vue';
-import WorkExperiences from '@/components/profile/WorkExperiences.vue';
+import profile from '@/data/profile';
 
 export default {
   name: 'Profile',
-  components: {
-    Education,
-    WorkExperiences,
+  components: {},
+  data() {
+    return {
+      profile,
+    };
   },
 };
 </script>
