@@ -8,7 +8,16 @@
       <template v-slot:header>
         {{ profileGroup.type }}
       </template>
-      <BaseTimeline :items="profileGroup.data" />
+      <BaseCatalog
+        v-slot:default="slotProps"
+        :items="profileGroup.data"
+        :divider-class="['block', 'md:hidden']"
+      >
+        <BaseTimelineItem
+          :item="slotProps.item"
+          :show-line="slotProps.itemIndex !== profileGroup.data.length - 1"
+        />
+      </BaseCatalog>
     </BaseCard>
   </BaseContainer>
 </template>

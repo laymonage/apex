@@ -8,7 +8,12 @@
       <template v-slot:header>
         {{ `${projectGroup.type} Projects` }}
       </template>
-      <BaseShowcase :items="projectGroup.data" />
+      <BaseCatalog
+        v-slot:default="slotProps"
+        :items="projectGroup.data"
+      >
+        <BaseShowcaseItem :item="slotProps.item" />
+      </BaseCatalog>
     </BaseCard>
   </BaseContainer>
 </template>

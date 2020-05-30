@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col md:flex-row-reverse justify-between text-gray-700"
+    class="flex flex-col md:flex-row-reverse justify-between text-gray-700 my-12 md:my-0"
   >
     <div
       class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12"
@@ -30,7 +30,7 @@
         <div class="border-l border-solid border-4 mx-auto my-2" />
       </div>
     </div>
-    <div class="flex flex-col items-start md:w-3/4 md:mr-8 md:mb-8">
+    <div class="flex flex-col items-start md:w-3/4 md:mr-8 md:mb-12">
       <div class="flex flex-col">
         <div class="flex flex-col text-xl ph:text-lg">
           <span>
