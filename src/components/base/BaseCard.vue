@@ -3,9 +3,12 @@
   w-full xl:w-11/12 mx-auto p-8">
     <div
       class="text-blue-700 md:text-5xl text-4xl mb-12"
-      :class="headerClass">
+      :class="headerClass"
+      v-if="$slots.header || $slots.header">
       <slot name="header"></slot>
-      <div class="md:text-3xl text-2xl ph:text-xl">
+      <div
+        class="md:text-3xl text-2xl ph:text-xl"
+        v-if="$slots.subtitle">
         <slot name="subtitle"></slot>
       </div>
     </div>
