@@ -1,18 +1,22 @@
 <template>
-  <div class="rounded bg-white shadow-md flex-col
-  w-full xl:w-11/12 mx-auto p-8">
+  <div
+    class="rounded bg-white shadow-md flex-col
+  w-full xl:w-11/12 mx-auto p-8"
+  >
     <div
+      v-if="$slots.header || $slots.header"
       class="text-blue-700 md:text-5xl text-4xl mb-12"
       :class="headerClass"
-      v-if="$slots.header || $slots.header">
-      <slot name="header"></slot>
+    >
+      <slot name="header" />
       <div
+        v-if="$slots.subtitle"
         class="md:text-3xl text-2xl ph:text-xl"
-        v-if="$slots.subtitle">
-        <slot name="subtitle"></slot>
+      >
+        <slot name="subtitle" />
       </div>
     </div>
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
@@ -29,6 +33,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped>
-</style>

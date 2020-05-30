@@ -2,12 +2,16 @@
   <ol>
     <li
       v-for="(item, itemIndex) in items"
-      v-bind:key="item.id">
-      <BaseTimelineItem :item="item" :showLine="itemIndex !== items.length - 1"/>
+      :key="item.id"
+    >
+      <BaseTimelineItem
+        :item="item"
+        :show-line="itemIndex !== items.length - 1"
+      />
       <div
         v-if="itemIndex !== items.length - 1"
-        class="block md:hidden w-full border mx-auto my-8">
-      </div>
+        class="block md:hidden w-full border mx-auto my-8"
+      />
     </li>
   </ol>
 </template>
@@ -17,12 +21,11 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'BaseTimeline',
-  components: {},
   props: {
-    items: Array,
+    items: {
+      type: Array,
+      default: () => [],
+    },
   },
 });
 </script>
-
-<style scoped>
-</style>

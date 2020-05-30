@@ -2,8 +2,9 @@
   <BaseContainer class="my-32">
     <BaseCard
       v-for="(profileGroup, profileIndex) in profile.data"
-      v-bind:key="profileGroup.id"
-      :class="{'mt-16': profileIndex !== 0}">
+      :key="profileGroup.id"
+      :class="{'mt-16': profileIndex !== 0}"
+    >
       <template v-slot:header>
         {{ profileGroup.type }}
       </template>
@@ -17,7 +18,6 @@ import profile from '@/data/profile';
 
 export default {
   name: 'Profile',
-  components: {},
   data() {
     return {
       profile,

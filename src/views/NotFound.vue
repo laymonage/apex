@@ -1,7 +1,9 @@
 <template>
   <BaseContainer>
-    <BaseCard class="w-fit" header-class="flex flex-row items-baseline">
-
+    <BaseCard
+      class="w-fit"
+      header-class="flex flex-row items-baseline"
+    >
       <template v-slot:header>
         <div class="flex flex-row items-baseline">
           <span class="font-bold">404</span>
@@ -23,7 +25,6 @@
           to go back to the homepage.
         </span>
       </div>
-
     </BaseCard>
   </BaseContainer>
 </template>

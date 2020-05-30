@@ -3,11 +3,19 @@
     class="flex items-center justify-between navbar z-10 fixed
     px-4 py-3 w-full bg-white shadow-md
     transition-all duration-300 ease-out"
-    :class="{ 'navbar-hidden': !showNavbar }">
+    :class="{ 'navbar-hidden': !showNavbar }"
+  >
     <Logo class="w-10 h-10" />
     <nav>
-      <router-link to="/">Home</router-link>
-      <router-link class="ml-4" to="/profile">Profile</router-link>
+      <router-link to="/">
+        Home
+      </router-link>
+      <router-link
+        class="ml-4"
+        to="/profile"
+      >
+        Profile
+      </router-link>
     </nav>
   </header>
 </template>

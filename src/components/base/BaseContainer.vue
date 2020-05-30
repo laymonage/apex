@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
@@ -11,6 +11,3 @@ export default Vue.extend({
   name: 'BaseContainer',
 });
 </script>
-
-<style scoped>
-</style>

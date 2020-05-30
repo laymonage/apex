@@ -5,12 +5,13 @@
       'list-decimal': list.type === 'decimal',
       'list-disc': list.type === 'disc',
       'ml-8': list.indented !== false
-    }">
+    }"
+  >
     <li
       v-for="(child, childIndex) in list.children"
-      v-bind:key="childIndex"
-      v-html="sanitize(marked(child))">
-    </li>
+      :key="childIndex"
+      v-html="sanitize(marked(child))"
+    />
   </component>
 </template>
 
@@ -22,7 +23,13 @@ import { sanitize } from 'dompurify';
 export default Vue.extend({
   name: 'BaseList',
   props: {
-    list: Object,
+    list: {
+      type: Object,
+      default: () => ({
+        type: 'disc',
+        children: [],
+      }),
+    },
   },
   methods: {
     marked,
@@ -30,6 +37,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped>
-</style>

@@ -1,6 +1,5 @@
 <template>
   <BaseCard>
-
     <template v-slot:header>
       <strong>{{ contact.alias }}</strong>
     </template>
@@ -11,21 +10,22 @@
     </template>
 
     <div
+      class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mb-8"
       v-html="sanitize(marked(contact.description))"
-      class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mb-8">
-    </div>
+    />
     <div class="flex items-center">
       <a
         v-for="(link, index) in contact.links"
-        v-bind:key="index"
-        :href="link.url">
+        :key="index"
+        :href="link.url"
+      >
         <component
           :is="link.icon"
           :class="{'ml-3': index > 0}"
-          class="fill-current w-6 h-6" />
+          class="fill-current w-6 h-6"
+        />
       </a>
     </div>
-
   </BaseCard>
 </template>
 
@@ -37,7 +37,6 @@ import Contact from '@/data/contact';
 
 export default Vue.extend({
   name: 'Contact',
-  components: {},
   data() {
     return {
       contact: Contact,
@@ -49,6 +48,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped>
-</style>

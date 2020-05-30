@@ -1,15 +1,18 @@
 <template>
   <div
-  class="flex flex-col md:flex-row-reverse justify-between text-gray-700">
+    class="flex flex-col md:flex-row-reverse justify-between text-gray-700"
+  >
     <div
-      class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12">
+      class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12"
+    >
       <div class="mb-4 md:mb-2">
         <a :href="item.institutionLogo.url">
           <BaseImage
             :image="item.institutionLogo.image"
             :class="item.institutionLogo.class"
-            :imgClass="['w-1/2', 'ph:w-3/4', 'md:w-auto', 'mx-auto']"
-            :componentClass="['w-1/2', 'md:w-4/6', 'xl:w-7/12', 'mx-auto']" />
+            :img-class="['w-1/2', 'ph:w-3/4', 'md:w-auto', 'mx-auto']"
+            :component-class="['w-1/2', 'md:w-4/6', 'xl:w-7/12', 'mx-auto']"
+          />
         </a>
       </div>
       <div class="flex items-center">
@@ -22,19 +25,23 @@
       <span v-if="item.dates.expected">(expected)</span>
       <div
         v-if="showLine"
-        class="hidden md:flex w-1/4 h-full">
-        <div class="border-l border-solid border-4 mx-auto my-2"></div>
+        class="hidden md:flex w-1/4 h-full"
+      >
+        <div class="border-l border-solid border-4 mx-auto my-2" />
       </div>
     </div>
     <div class="flex flex-col items-start md:w-3/4 md:mr-8 md:mb-8">
       <div class="flex flex-col">
         <div class="flex flex-col text-xl ph:text-lg">
           <span>
-            <span v-html="sanitize(marked(item.title))"></span>
+            <span v-html="sanitize(marked(item.title))" />
           </span>
           <span>{{ item.institution }}</span>
         </div>
-        <div v-if="item.subtitle" class="mt-2">
+        <div
+          v-if="item.subtitle"
+          class="mt-2"
+        >
           <span v-html="sanitize(marked(item.subtitle))" />
         </div>
       </div>
@@ -43,9 +50,10 @@
           {{ item.description }}
         </span>
         <BaseList
-          :list="item.details"
           v-if="item.details"
-          class="mt-2" />
+          :list="item.details"
+          class="mt-2"
+        />
       </div>
     </div>
   </div>
@@ -58,14 +66,34 @@ import { sanitize } from 'dompurify';
 
 export default Vue.extend({
   name: 'BaseTimelineItem',
-  components: {},
+  props: {
+    item: {
+      type: Object,
+      default: () => (
+        {
+          id: 0,
+          title: '',
+          institution: '',
+          institutionLogo: {
+            image: '',
+            url: '',
+          },
+          description: '',
+          dates: {
+            start: '',
+            end: '',
+          },
+          details: {
+            type: '',
+            children: [],
+          },
+        }),
+    },
+    showLine: Boolean,
+  },
   methods: {
     marked,
     sanitize,
-  },
-  props: {
-    item: Object,
-    showLine: Boolean,
   },
 });
 </script>
