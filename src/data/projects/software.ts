@@ -13,7 +13,7 @@ export const data = [
       class: ['w-6/12', 'md:w-8/12', 'xl:w-7/12'],
     },
     title: 'laymonage.com',
-    url: 'https://github.com/laymonage/root',
+    url: 'https://github.com/laymonage/apex',
     description: 'A personal website built with Vue, TypeScript, and Tailwind.',
     details: {
       type: 'disc',
