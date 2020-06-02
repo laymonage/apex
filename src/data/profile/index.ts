@@ -1,11 +1,11 @@
 import education from './education';
-import activity from './activity';
+import activities from './activities';
 import workExperiences from './work-experiences';
 
 export default {
   data: [
     education,
-    activity,
+    activities,
     workExperiences,
   ],
 };
