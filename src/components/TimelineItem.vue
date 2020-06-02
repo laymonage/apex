@@ -48,9 +48,7 @@
         </div>
       </div>
       <div class="flex flex-col mt-4">
-        <span>
-          {{ item.description }}
-        </span>
+        <span v-html="sanitize(marked(item.description))" />
         <BaseList
           v-if="item.details"
           :list="item.details"

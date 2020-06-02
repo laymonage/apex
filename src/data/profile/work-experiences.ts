@@ -11,10 +11,8 @@ export const data = [
       image: csui,
       url: 'https://cs.ui.ac.id',
     },
-    description: `
-      Tutored students, designed problem sets, and graded student assignments
-      in four different courses.
-    `,
+    description: `Tutored students, designed problem sets, and graded student assignments
+    in four different courses.`,
     dates: {
       start: 'Aug 2018',
       end: 'present',
