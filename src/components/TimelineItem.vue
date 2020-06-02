@@ -8,10 +8,12 @@
       <div class="mb-4 md:mb-2">
         <a :href="item.institutionLogo.url">
           <BaseImage
+            class="mx-auto"
             :image="item.institutionLogo.image"
-            :class="item.institutionLogo.class"
-            :img-class="['w-1/2', 'ph:w-3/4', 'md:w-auto', 'mx-auto']"
-            :component-class="['w-1/2', 'md:w-4/6', 'xl:w-7/12', 'mx-auto']"
+            :img-class="
+              item.institutionLogo.class || ['w-1/2', 'ph:w-3/4', 'md:w-auto']"
+            :component-class="
+              item.institutionLogo.class || ['w-1/2', 'md:w-4/6', 'xl:w-7/12']"
           />
         </a>
       </div>
