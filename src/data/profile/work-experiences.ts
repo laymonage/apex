@@ -79,7 +79,8 @@ Additional work as a coordinator:
   },
   {
     id: 2,
-    title: '**Student** with **Django Software Foundation**',
+    title: `**Student** with
+    [**Django Software Foundation**](https://www.djangoproject.com/foundation)`,
     institution: 'Google Summer of Code 2019',
     institutionLogo: {
       image: gsoc,
@@ -105,6 +106,10 @@ that can be used for all database backends supported by Django
 Identified and provided an initial patch for
 [**a security vulnerability**](https://www.djangoproject.com/weblog/2019/aug/01/security-releases/)
 in Django.`,
+
+        `
+Documented the whole journey on [**a blog**](https://gsoc.laymonage.com)
+on a regular basis during the program.`,
       ],
     },
   },
