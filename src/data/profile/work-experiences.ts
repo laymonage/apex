@@ -83,7 +83,7 @@ Additional work as a coordinator:
     institution: 'Google Summer of Code 2019',
     institutionLogo: {
       image: gsoc,
-      class: ['ph:px-0', 'px-4', '-mb-4', 'md:-mb-2'],
+      class: ['w-5/12', 'ph:w-7/12', 'md:w-10/12', 'mx-auto'],
       url: 'https://g.co/gsoc',
     },
     description: `Participated in the annual open source software development program
