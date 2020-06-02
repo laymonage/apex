@@ -38,7 +38,7 @@
           <span>
             <span v-html="sanitize(marked(item.title))" />
           </span>
-          <span>{{ item.institution }}</span>
+          <span><a :href="item.institutionLogo.url">{{ item.institution }}</a></span>
         </div>
         <div
           v-if="item.subtitle"
