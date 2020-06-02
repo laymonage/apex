@@ -29,6 +29,7 @@ export const data = [
     id: 4,
     image: {
       src: tiga,
+      class: ['w-3/4'],
     },
     title: 'Tiga',
     url: 'https://www.instagram.com/p/BdRHV1TDYqx',
@@ -57,7 +58,7 @@ export const data = [
     id: 1,
     image: {
       src: aidensreactions,
-      class: ['p-4'],
+      class: ['w-3/4'],
     },
     title: 'Aiden\'s Reactions',
     url: 'https://telegram.me/addstickers/AidenR1',
