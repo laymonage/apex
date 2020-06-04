@@ -33,7 +33,7 @@ import marked from 'marked';
 import { sanitize } from 'dompurify';
 
 export default Vue.extend({
-  name: 'BaseTimelineItem',
+  name: 'ShowcaseItem',
   props: {
     item: {
       type: Object,
