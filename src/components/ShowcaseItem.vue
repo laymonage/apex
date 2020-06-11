@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex flex-col md:flex-row justify-between items-center text-gray-700 my-12"
+    class="flex flex-col md:flex-row justify-between items-start md:items-center
+    text-gray-700 my-12"
   >
     <div class="w-full sm:w-9/12 md:w-5/12 lg:w-3/12 mx-auto">
       <BaseImage
