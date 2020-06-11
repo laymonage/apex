@@ -1,12 +1,21 @@
 import Vue from 'vue';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
+import VueLazyload from 'vue-lazyload';
+import spinner from '@/assets/img/common/spinner.svg';
 import App from './App.vue';
 import router from './router';
 import '@/assets/css/tailwind.css';
 import '@/assets/css/main.css';
 
 Vue.config.productionTip = process.env.node_env === 'production';
+
+Vue.use(
+  VueLazyload, {
+    loading: spinner,
+    observer: true,
+  },
+);
 
 const requireComponent = require.context(
   '@/components/base',
