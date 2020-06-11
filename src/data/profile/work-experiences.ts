@@ -129,7 +129,7 @@ on a regular basis during the program.`,
     details: {
       type: 'disc',
       children: [
-        'Deployed a financial software used by the accountants.',
+        'Deployed a financial program used by the accountants.',
         'Localized and deployed a NodeJS application to manage employees\' annual leave.',
       ],
     },
