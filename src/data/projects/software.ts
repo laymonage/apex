@@ -2,8 +2,9 @@ import logo from '@/assets/img/logo.svg';
 import kbbi from '@/assets/img/projects/kbbi.png';
 import sigap from '@/assets/img/projects/sigap.png';
 import santun from '@/assets/img/projects/santun.png';
-import ssoui from '@/assets/img/projects/sso-ui.png';
+import flappymecin from '@/assets/img/projects/flappymecin.png';
 import aiden from '@/assets/img/projects/aiden.svg';
+import ssoui from '@/assets/img/projects/sso-ui.png';
 
 export const data = [
   {
@@ -79,6 +80,28 @@ export const data = [
           synced with a web service.`,
         'Utilizes Kotlin coroutines to avoid I/O blocking.',
         'Modular UI divided into fragments.',
+      ],
+    },
+  },
+  {
+    id: 6,
+    image: {
+      src: flappymecin,
+      class: ['p-4'],
+    },
+    title: 'Flappy Mecin',
+    url: 'https://gitlab.com/MecinLearning/FlappyMecin',
+    description: `A Flappy Bird clone with an artificial intelligence opponent
+    trained with a [Neuroevolution](https://en.wikipedia.org/wiki/Neuroevolution) algorithm.`,
+    details: {
+      type: 'disc',
+      children: [
+        'Implemented a neural network and genetic algorithm from scratch.',
+        'Successfully trained the AI so that it has almost zero chance of losing the game.',
+        `Utilized C# delegate functions to bind methods dynamically
+        and make the code more modular.`,
+        `Worked with 2 other classmates to build the game with little prior knowledge
+        about Unity and C#.`,
       ],
     },
   },
