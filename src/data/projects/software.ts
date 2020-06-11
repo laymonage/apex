@@ -31,11 +31,13 @@ export const data = [
     },
     title: 'kbbi-python',
     url: 'https://github.com/laymonage/kbbi-python',
-    description: 'A module that scraps the online Indonesian dictionary (KBBI).',
+    description: `A module that scraps the
+    [online Indonesian dictionary (KBBI)](https://kbbi.kemdikbud.go.id).`,
     details: {
       type: 'disc',
       children: [
         'Provides a much-needed (unofficial) API and a CLI to the online dictionary.',
+        'Supports authentication with a KBBI account to increase the rate limit.',
         'Built with `requests`, `beautifulsoup4`, and Python\'s `argparse` module.',
         '20+ stars and used by 80+ projects on GitHub.',
         '`flake8`-compliant with `black` code style and 100% code coverage.',
@@ -57,7 +59,7 @@ export const data = [
       type: 'disc',
       children: [
         'Built with Flutter for Android, iOS, and Web.',
-        'Utilized Cloud Firestore to provide real-time data in the app.',
+        'Utilizes Cloud Firestore to provide real-time data.',
         `Worked with 5 other developers to build the app in one week
           with little prior knowledge about Flutter.`,
       ],
@@ -71,7 +73,7 @@ export const data = [
     },
     title: 'Santun',
     url: 'https://github.com/laymonage/santun',
-    description: 'A native Android app to send anonymous messages.',
+    description: 'An Android app to send anonymous messages.',
     details: {
       type: 'disc',
       children: [
@@ -98,7 +100,7 @@ export const data = [
       children: [
         'Implemented a neural network and genetic algorithm from scratch.',
         'Successfully trained the AI so that it has almost zero chance of losing the game.',
-        `Utilized C# delegate functions to bind methods dynamically
+        `Made use of C# delegate functions to bind methods dynamically
         and make the code more modular.`,
         `Worked with 2 other classmates to build the game with little prior knowledge
         about Unity and C#.`,

@@ -19,6 +19,6 @@ export default Vue.extend({
 
 <style scoped>
 img[lazy=loading] {
-  @apply w-1/4;
+  @apply w-1/4 p-0;
 }
 </style>
