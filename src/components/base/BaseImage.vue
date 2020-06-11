@@ -1,33 +1,17 @@
 <template>
-  <img
-    v-if="typeof image === 'string'"
-    :src="image"
-    :class="imgClass"
-  >
-  <component
-    :is="image"
-    v-else
-    :class="componentClass"
-  />
+  <img v-lazy="image">
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import spinner from '@/assets/img/common/spinner.svg';
 
 export default Vue.extend({
   name: 'BaseImage',
   props: {
     image: {
-      type: [String, Object],
-      default: '',
-    },
-    imgClass: {
-      type: [String, Object, Array],
-      default: '',
-    },
-    componentClass: {
-      type: [String, Object, Array],
-      default: '',
+      type: String,
+      default: spinner,
     },
   },
 });

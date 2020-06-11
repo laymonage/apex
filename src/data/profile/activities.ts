@@ -9,7 +9,6 @@ export const data = [
     institutionLogo: {
       image: dsc,
       url: 'https://g.co/dev/dsc',
-      class: ['w-full'],
     },
     description: `Led the Universitas Indonesia chapter of
     Developer Student Clubs, a program by Google Developers.`,
@@ -35,7 +34,7 @@ export const data = [
     institutionLogo: {
       image: genbi,
       url: 'https://genbi.id',
-      class: ['w-3/4'],
+      class: ['w-1/2', 'sm:w-4/12', 'md:w-3/4'],
     },
     description: `Became a member of GenBI, a community of
     [Bank Indonesia](https://www.bi.go.id/en)'s scholarship grantees.`,

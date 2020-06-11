@@ -5,15 +5,12 @@
     <div
       class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12"
     >
-      <div class="mb-4 md:mb-2">
+      <div class="w-full mb-4 md:mb-2">
         <a :href="item.institutionLogo.url">
           <BaseImage
             class="mx-auto"
             :image="item.institutionLogo.image"
-            :img-class="
-              item.institutionLogo.class || ['w-1/2', 'ph:w-3/4', 'md:w-auto']"
-            :component-class="
-              item.institutionLogo.class || ['w-1/2', 'md:w-4/6', 'xl:w-7/12']"
+            :class="item.institutionLogo.class || ['w-1/2', 'ph:w-3/4', 'md:w-full']"
           />
         </a>
       </div>

@@ -82,8 +82,8 @@ Additional work as a coordinator:
     institution: 'Google Summer of Code 2019',
     institutionLogo: {
       image: gsoc,
-      class: ['w-5/12', 'ph:w-7/12', 'md:w-10/12', 'mx-auto'],
       url: 'https://g.co/gsoc',
+      class: ['w-5/12', 'ph:w-7/12', 'md:w-10/12'],
     },
     description: `Participated in the annual open source software development program
     held by Google.`,
@@ -118,6 +118,7 @@ on a regular basis during the program.`,
     institutionLogo: {
       image: wmid,
       url: 'https://wikimedia.or.id',
+      class: ['ph:w-1/2', 'xs:w-4/12', 'w-1/4', 'md:w-7/12'],
     },
     description: `Set up a local server to host applications internally and
     instructed the employees on how to use them.`,

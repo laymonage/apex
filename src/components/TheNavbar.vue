@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Logo from '@/assets/img/logo.svg';
+import Logo from '@/assets/img/logo.svg?cmp';
 
 export default Vue.extend({
   name: 'TheNavbar',

@@ -8,6 +8,7 @@ export const data = [
     institutionLogo: {
       image: ui,
       url: 'https://ui.ac.id/en',
+      class: ['ph:w-1/2', 'xs:w-4/12', 'w-1/4', 'md:w-7/12'],
     },
     subtitle: '**3.93/4.00 CGPA**',
     description: 'Relevant courses taken:',
