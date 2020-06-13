@@ -5,8 +5,10 @@
     transition-all duration-300 ease-out"
     :class="{ 'navbar-hidden': !showNavbar }"
   >
-    <Logo class="w-10 h-10" />
-    <nav>
+    <router-link to="/">
+      <Logo class="w-10 h-10" />
+    </router-link>
+    <nav role="navigation">
       <router-link to="/">
         Home
       </router-link>
