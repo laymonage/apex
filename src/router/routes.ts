@@ -1,4 +1,3 @@
-
 import Home from '@/views/Home.vue';
 import NotFound from '@/views/NotFound.vue';
 
