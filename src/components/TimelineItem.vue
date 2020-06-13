@@ -17,7 +17,10 @@
       <div class="flex items-center">
         <span>{{ item.dates.start }}</span>
         <span v-if="item.dates.end !== item.dates.start">
-          <span class="mx-1">-</span>
+          <span
+            v-if="item.dates.start && item.dates.end"
+            class="mx-1"
+          >-</span>
           <span>{{ item.dates.end }}</span>
         </span>
       </div>
