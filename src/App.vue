@@ -3,7 +3,7 @@
     id="app"
     class="flex flex-col items-center"
   >
-    <TheNavbar />
+    <TheNavbar :nav-links="navLinks" />
     <div
       id="content"
       class="flex w-full min-h-screen items-center bg-gray-100"
@@ -21,6 +21,15 @@ export default Vue.extend({
   name: 'App',
   components: {
     TheNavbar,
+  },
+  data() {
+    return {
+      navLinks: [
+        { name: 'Home', to: '/' },
+        { name: 'Profile', to: '/profile' },
+        { name: 'Projects', to: '/projects' },
+      ],
+    };
   },
 });
 </script>

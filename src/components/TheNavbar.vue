@@ -26,22 +26,12 @@
       :class="{'hidden': !isOpen}"
     >
       <router-link
+        v-for="(link, idx) in navLinks"
+        :key="idx"
+        :to="link.to"
         class="p-2 block rounded focus:outline-none focus:bg-gray-200 hover:bg-gray-200"
-        to="/"
       >
-        Home
-      </router-link>
-      <router-link
-        class="p-2 block rounded focus:outline-none focus:bg-gray-200 hover:bg-gray-200"
-        to="/profile"
-      >
-        Profile
-      </router-link>
-      <router-link
-        class="p-2 block rounded focus:outline-none focus:bg-gray-200 hover:bg-gray-200"
-        to="/projects"
-      >
-        Projects
+        {{ link.name }}
       </router-link>
     </nav>
   </header>
@@ -57,6 +47,12 @@ export default Vue.extend({
   name: 'TheNavbar',
   components: {
     Logo,
+  },
+  props: {
+    navLinks: {
+      type: Array,
+      default: () => [{ name: 'Home', to: '/' }],
+    },
   },
   data() {
     return {
