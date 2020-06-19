@@ -1,25 +1,44 @@
 <template>
   <header
-    class="flex items-center justify-between navbar z-10 fixed
-    px-4 py-3 w-full bg-white shadow-md
+    class="sm:flex sm:justify-between sm:items-center
+    navbar z-10 fixed w-full py-3 bg-white shadow-md
     transition-all duration-300 ease-out"
     :class="{ 'navbar-hidden': !showNavbar }"
   >
-    <router-link to="/">
-      <Logo class="w-10 h-10" />
-    </router-link>
-    <nav role="navigation">
+    <div class="mx-4 flex items-center justify-between">
       <router-link to="/">
+        <Logo class="w-10 h-10" />
+      </router-link>
+      <button
+        type="button"
+        class="focus:outline-none focus:text-blue-600 hover:text-blue-600 sm:hidden"
+        @click="isOpen = !isOpen"
+      >
+        <component
+          :is="toggleIcon"
+          class="fill-current w-8 h-8"
+        />
+      </button>
+    </div>
+    <nav
+      role="navigation"
+      class="px-2 pt-2 sm:p-0 xs:mx-0 sm:mr-4 sm:flex sm:items-center"
+      :class="{'hidden': !isOpen}"
+    >
+      <router-link
+        class="p-2 block rounded focus:outline-none focus:bg-gray-200 hover:bg-gray-200"
+        to="/"
+      >
         Home
       </router-link>
       <router-link
-        class="ml-4"
+        class="p-2 block rounded focus:outline-none focus:bg-gray-200 hover:bg-gray-200"
         to="/profile"
       >
         Profile
       </router-link>
       <router-link
-        class="ml-4"
+        class="p-2 block rounded focus:outline-none focus:bg-gray-200 hover:bg-gray-200"
         to="/projects"
       >
         Projects
@@ -29,8 +48,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { Component } from 'vue';
 import Logo from '@/assets/img/logo.svg?cmp';
+import Bars from '@/assets/img/vue-unicons/bars.svg?cmp';
+import Times from '@/assets/img/vue-unicons/times.svg?cmp';
 
 export default Vue.extend({
   name: 'TheNavbar',
@@ -41,7 +62,13 @@ export default Vue.extend({
     return {
       showNavbar: true,
       lastScrollPosition: 0,
+      isOpen: false,
     };
+  },
+  computed: {
+    toggleIcon(): Component {
+      return this.isOpen ? Times : Bars;
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll);
