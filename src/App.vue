@@ -1,12 +1,19 @@
 <template>
   <div
     id="app"
-    class="flex flex-col items-center"
+    class="flex flex-col items-center font-sans antialiased"
+    :class="{'theme-dark': dark}"
   >
-    <TheNavbar :nav-links="navLinks" />
+    <TheNavbar
+      :nav-links="navLinks"
+      :is-dark="dark"
+      @dark="dark = !dark"
+    />
     <div
       id="content"
-      class="flex w-full min-h-screen items-center bg-gray-100"
+      class="flex w-full min-h-screen items-center
+      bg-gray-100 text-gray-700
+      dark:bg-gray-900 dark:text-gray-300"
     >
       <router-view />
     </div>
@@ -29,13 +36,8 @@ export default Vue.extend({
         { name: 'Profile', to: '/profile' },
         { name: 'Projects', to: '/projects' },
       ],
+      dark: false,
     };
   },
 });
 </script>
-
-<style>
-#app {
-  @apply font-sans text-gray-900 antialiased;
-}
-</style>

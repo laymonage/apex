@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col md:flex-row-reverse justify-between text-gray-700 my-12 md:my-0"
+    class="flex flex-col md:flex-row-reverse justify-between my-12 md:my-0"
   >
     <div
       class="flex flex-col items-center mb-8 md:mb-0 md:w-3/12 lg:w-2/12"
@@ -8,7 +8,7 @@
       <div class="w-full mb-4 md:mb-2">
         <a :href="item.institutionLogo.url">
           <BaseImage
-            class="mx-auto"
+            class="mx-auto rounded"
             :image="item.institutionLogo.image"
             :class="item.institutionLogo.class || ['w-1/2', 'ph:w-3/4', 'md:w-full']"
           />

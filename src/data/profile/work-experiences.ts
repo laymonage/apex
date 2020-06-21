@@ -10,6 +10,7 @@ export const data = [
     institutionLogo: {
       image: csui,
       url: 'https://cs.ui.ac.id',
+      class: ['p-2', 'ph:w-full', 'w-3/4', 'md:w-full', 'dark:bg-white'],
     },
     description: `Tutored students, designed problem sets, and graded student assignments
     in four different courses.`,
@@ -57,6 +58,7 @@ Additional work as a coordinator:
     institutionLogo: {
       image: csui,
       url: 'https://cs.ui.ac.id',
+      class: ['p-2', 'ph:w-full', 'w-3/4', 'md:w-full', 'dark:bg-white'],
     },
     description: 'Improved and added new features to a room reservation system.',
     dates: {
@@ -83,7 +85,7 @@ Additional work as a coordinator:
     institutionLogo: {
       image: gsoc,
       url: 'https://g.co/gsoc',
-      class: ['w-5/12', 'ph:w-7/12', 'md:w-10/12'],
+      class: ['w-5/12', 'sm:w-5/12', 'ph:w-7/12', 'md:w-10/12', 'p-2', 'dark:bg-white'],
     },
     description: `Participated in the annual open source software development program
     held by Google.`,
@@ -118,7 +120,7 @@ on a regular basis during the program.`,
     institutionLogo: {
       image: wmid,
       url: 'https://wikimedia.or.id',
-      class: ['ph:w-1/2', 'xs:w-4/12', 'w-1/4', 'md:w-7/12'],
+      class: ['ph:w-1/2', 'xs:w-5/12', 'sm:w-5/12', 'md:w-9/12', 'dark:bg-white', 'p-4'],
     },
     description: `Set up a local server to host applications internally and
     instructed the employees on how to use them.`,

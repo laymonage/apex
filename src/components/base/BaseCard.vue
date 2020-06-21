@@ -1,11 +1,11 @@
 <template>
   <div
-    class="rounded bg-white shadow-md flex-col
+    class="rounded bg-white dark:bg-gray-800 shadow-md flex-col
   w-full xl:w-11/12 mx-auto p-8"
   >
     <div
       v-if="$slots.header || $slots.header"
-      class="text-blue-700 md:text-5xl text-4xl mb-12"
+      class="text-blue-700 dark:text-blue-200 md:text-5xl text-4xl mb-12"
       :class="headerClass"
     >
       <slot name="header" />

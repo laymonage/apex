@@ -9,6 +9,7 @@ export const data = [
     institutionLogo: {
       image: dsc,
       url: 'https://g.co/dev/dsc',
+      class: ['p-2', 'dark:bg-white', 'ph:w-full', 'w-3/4', 'md:w-full'],
     },
     description: `Led the Universitas Indonesia chapter of
     Developer Student Clubs, a program by Google Developers.`,

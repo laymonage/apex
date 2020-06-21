@@ -13,7 +13,14 @@ module.exports = {
         sans: ['Lato', 'sans-serif'],
       },
     },
+    themeVariants: ['dark'],
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'dark:hover', 'dark:focus'],
+    textColor: ['responsive', 'hover', 'focus', 'dark', 'dark:hover', 'dark:focus'],
+    margin: ['responsive', 'first'],
+  },
+  plugins: [
+    require('tailwindcss-multi-theme'),
+  ],
 };

@@ -39,7 +39,7 @@ export const data = [
     id: 3,
     image: {
       src: lunacy,
-      class: ['w-1/2'],
+      class: ['p-4', 'w-8/12', 'dark:bg-white'],
     },
     title: 'Lunacy',
     url: 'https://line.me/S/shop/theme/detail?id=33ef311d-7d79-444b-8e22-1f08d09c3f4b',

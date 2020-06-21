@@ -10,7 +10,7 @@
     </template>
 
     <div
-      class="text-gray-700 text-left md:text-2xl text-xl ph:text-lg mb-8"
+      class="text-left md:text-2xl text-xl ph:text-lg mb-8"
       v-html="sanitize(marked(contact.description))"
     />
     <div class="flex items-center">
@@ -18,10 +18,15 @@
         v-for="(link, index) in contact.links"
         :key="index"
         :href="link.url"
+        class="ml-3 first:ml-0 p-1 rounded
+        focus:outline-none focus:bg-gray-200 focus:text-blue-600
+        hover:bg-gray-200 hover:text-blue-600
+        dark:text-blue-200
+        dark:focus:bg-blue-900 dark:focus:text-blue-100
+        dark:hover:bg-blue-900 dark:hover:text-blue-100"
       >
         <component
           :is="link.icon"
-          :class="{'ml-3': index > 0}"
           class="fill-current w-6 h-6"
         />
       </a>

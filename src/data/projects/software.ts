@@ -111,6 +111,7 @@ export const data = [
     id: 1,
     image: {
       src: aiden,
+      class: ['dark:bg-white'],
     },
     title: 'AidenBot',
     url: 'https://github.com/laymonage/AidenBot',
