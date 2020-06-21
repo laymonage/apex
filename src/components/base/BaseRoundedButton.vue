@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="rounded-full focus:outline-none focus:shadow-outline"
+    class="rounded-full"
   >
     <slot />
   </button>

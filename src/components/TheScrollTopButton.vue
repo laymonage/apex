@@ -2,7 +2,7 @@
   <BaseRoundedButton
     :class="{'button-hidden': !showButton}"
     class="transition-all duration-300 button z-10 fixed bottom-right
-    shadow-lg bg-blue-700 text-white dark:bg-blue-900"
+    shadow-lg bg-blue-700 text-white dark:bg-blue-900 focus:outline-none"
   >
     <Up
       class="fill-current w-16 h-16"
