@@ -39,5 +39,13 @@ export default Vue.extend({
       dark: false,
     };
   },
+  watch: {
+    dark(value) {
+      localStorage.dark = value;
+    },
+  },
+  mounted() {
+    this.dark = localStorage.dark === 'true';
+  },
 });
 </script>
