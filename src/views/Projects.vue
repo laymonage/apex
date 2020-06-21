@@ -21,7 +21,8 @@
 
 <script>
 import ShowcaseItem from '@/components/ShowcaseItem.vue';
-import projects from '../data/projects';
+import projects from '@/data/projects';
+import { scrollToTarget } from '@/utils/route-utils';
 
 export default {
   name: 'Projects',
@@ -32,6 +33,9 @@ export default {
     return {
       projects,
     };
+  },
+  mounted() {
+    this.$nextTick(() => this.$route.hash && scrollToTarget(this.$route.hash));
   },
 };
 </script>

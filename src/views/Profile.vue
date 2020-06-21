@@ -26,6 +26,7 @@
 <script>
 import TimelineItem from '@/components/TimelineItem.vue';
 import profile from '@/data/profile';
+import { scrollToTarget } from '@/utils/route-utils';
 
 export default {
   name: 'Profile',
@@ -36,6 +37,9 @@ export default {
     return {
       profile,
     };
+  },
+  mounted() {
+    this.$nextTick(() => this.$route.hash && scrollToTarget(this.$route.hash));
   },
 };
 </script>
