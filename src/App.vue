@@ -45,7 +45,14 @@ export default Vue.extend({
     },
   },
   mounted() {
-    this.dark = localStorage.dark === 'true';
+    if (localStorage.dark) {
+      this.dark = localStorage.dark === 'true';
+    } else {
+      this.dark = (
+        window.matchMedia
+        && window.matchMedia('(prefers-color-scheme: dark)').matches
+      );
+    }
   },
 });
 </script>
