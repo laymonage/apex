@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts">
-import Vue, { Component } from 'vue';
+import Vue from 'vue';
 import Logo from '@/assets/img/logo.svg?cmp';
 import Bars from '@/assets/img/vue-unicons/bars.svg?cmp';
 import Times from '@/assets/img/vue-unicons/times.svg?cmp';
@@ -47,6 +47,8 @@ export default Vue.extend({
   name: 'TheNavbar',
   components: {
     Logo,
+    Times,
+    Bars,
   },
   props: {
     navLinks: {
@@ -62,8 +64,8 @@ export default Vue.extend({
     };
   },
   computed: {
-    toggleIcon(): Component {
-      return this.isOpen ? Times : Bars;
+    toggleIcon(): string {
+      return this.isOpen ? 'Times' : 'Bars';
     },
   },
   mounted() {
