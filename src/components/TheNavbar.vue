@@ -15,7 +15,7 @@
         @click="isOpen = !isOpen"
       >
         <component
-          :is="toggleIcon"
+          :is="navToggle"
           class="fill-current w-8 h-8"
         />
       </button>
@@ -64,7 +64,7 @@ export default Vue.extend({
     };
   },
   computed: {
-    toggleIcon(): string {
+    navToggle(): string {
       return this.isOpen ? 'Times' : 'Bars';
     },
   },
