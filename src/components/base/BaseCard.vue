@@ -4,7 +4,7 @@
   w-full xl:w-11/12 mx-auto p-8"
   >
     <div
-      v-if="$slots.header || $slots.header"
+      v-if="$slots.header || $slots.subtitle"
       class="text-blue-700 dark:text-blue-200 md:text-5xl text-4xl mb-12"
       :class="headerClass"
     >
