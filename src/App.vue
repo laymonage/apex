@@ -22,13 +22,6 @@
   </div>
 </template>
 
-<style scoped>
-.bottom-right {
-  bottom: 2.5%;
-  right: 2.5%;
-}
-</style>
-
 <script lang="ts">
 import Vue from 'vue';
 import TheNavbar from '@/components/TheNavbar.vue';

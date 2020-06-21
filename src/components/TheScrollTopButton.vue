@@ -20,6 +20,11 @@
   @apply shadow-none;
   transform: translate3d(0, 150%, 0);
 }
+
+.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
 </style>
 
 <script lang="ts">
