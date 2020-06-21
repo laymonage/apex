@@ -8,7 +8,19 @@ module.exports = {
     '@vue/airbnb',
     '@vue/typescript/recommended',
   ],
-  ignorePatterns: ["**/assets/*"],
+  ignorePatterns: ['**/assets/*'],
+  overrides: [
+    {
+      files: ['**/*.config.js'],
+      parserOptions: {
+        ecmaVersion: 5,
+      },
+      rules: {
+        'global-require': 'off',
+        'import/no-extraneous-dependencies': 'off',
+      }
+    }
+  ],
   parserOptions: {
     ecmaVersion: 2020,
   },
