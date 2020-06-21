@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       screens: {
         xs: { max: '640px' },
-        ph: { max: '420px' },
+        ph: { max: '425px' },
       },
       fontFamily: {
         sans: ['Lato', 'sans-serif'],
