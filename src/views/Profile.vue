@@ -4,6 +4,7 @@
       v-for="(profileGroup, profileIndex) in profile.data"
       :key="profileGroup.id"
       :class="{'mt-16': profileIndex !== 0}"
+      :anchor="profileGroup.anchor"
     >
       <template v-slot:header>
         {{ profileGroup.type }}

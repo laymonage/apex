@@ -48,5 +48,6 @@ export const data = [
 export default {
   id: 3,
   type: 'Honors',
+  anchor: 'honors',
   data,
 };

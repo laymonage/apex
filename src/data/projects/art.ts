@@ -1,4 +1,3 @@
-
 import sagesans from '@/assets/img/projects/sagesans.svg';
 import tiga from '@/assets/img/projects/tiga.jpg';
 import lunacy from '@/assets/img/projects/lunacy.png';
@@ -78,7 +77,8 @@ export const data = [
 ];
 
 export default {
-  type: 'Art',
   id: 1,
+  type: 'Art',
+  anchor: 'art',
   data,
 };

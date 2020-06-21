@@ -33,5 +33,6 @@ export const data = [
 export default {
   id: 0,
   type: 'Education',
+  anchor: 'education',
   data,
 };

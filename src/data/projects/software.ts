@@ -148,7 +148,8 @@ export const data = [
 ];
 
 export default {
-  type: 'Software',
   id: 0,
+  type: 'Software',
+  anchor: 'software',
   data,
 };

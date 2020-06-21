@@ -141,5 +141,6 @@ on a regular basis during the program.`,
 export default {
   id: 1,
   type: 'Work Experiences',
+  anchor: 'work-experiences',
   data,
 };

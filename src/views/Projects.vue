@@ -4,6 +4,7 @@
       v-for="(projectGroup, projectIndex) in projects.data"
       :key="projectGroup.id"
       :class="{'mt-16': projectIndex !== 0}"
+      :anchor="projectGroup.anchor"
     >
       <template v-slot:header>
         {{ `${projectGroup.type} Projects` }}

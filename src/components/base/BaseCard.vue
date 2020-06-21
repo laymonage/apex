@@ -5,10 +5,20 @@
   >
     <div
       v-if="$slots.header || $slots.subtitle"
-      class="text-blue-700 dark:text-blue-200 md:text-5xl text-4xl mb-12"
+      :id="anchor"
       :class="headerClass"
+      class="text-blue-700 dark:text-blue-200 md:text-5xl text-4xl mb-12"
     >
-      <slot name="header" />
+      <a
+        v-if="anchor"
+        :href="`#${anchor}`"
+      >
+        <slot name="header" />
+      </a>
+      <slot
+        v-else
+        name="header"
+      />
       <div
         v-if="$slots.subtitle"
         class="md:text-3xl text-2xl ph:text-xl"
@@ -26,6 +36,10 @@ import Vue from 'vue';
 export default Vue.extend({
   name: 'BaseCard',
   props: {
+    anchor: {
+      type: String,
+      default: '',
+    },
     headerClass: {
       type: [String, Object, Array],
       default: () => ['flex', 'flex-col', 'sm:flex-row', 'items-baseline'],

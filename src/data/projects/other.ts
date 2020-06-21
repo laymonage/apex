@@ -14,7 +14,8 @@ export const data = [
 ];
 
 export default {
-  type: 'Other',
   id: 2,
+  type: 'Other',
+  anchor: 'other',
   data,
 };

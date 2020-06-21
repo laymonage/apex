@@ -57,5 +57,6 @@ export const data = [
 export default {
   id: 2,
   type: 'Activities',
+  anchor: 'activities',
   data,
 };
