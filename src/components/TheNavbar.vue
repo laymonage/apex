@@ -38,7 +38,7 @@
           class="sm:hidden ml-4 focus:outline-none
           focus:text-blue-600 hover:text-blue-600
           dark:focus:text-blue-100 dark:hover:text-blue-100"
-          @click="isOpen = !isOpen"
+          @click.stop="toggleNavbar"
         >
           <component
             :is="navToggle"
@@ -51,6 +51,7 @@
       role="navigation"
       class="px-2 pt-2 sm:p-0 xs:mx-0 sm:mr-4 sm:flex sm:items-center"
       :class="{'hidden': !isOpen}"
+      @click.stop
     >
       <router-link
         v-for="(link, idx) in navLinks"
@@ -123,6 +124,18 @@ export default Vue.extend({
       }
       this.showNavbar = currentScrollPosition < this.lastScrollPosition;
       this.lastScrollPosition = currentScrollPosition;
+    },
+    toggleNavbar() {
+      this.isOpen = !this.isOpen;
+      if (this.isOpen) {
+        this.$nextTick(() => {
+          document.addEventListener('click', this.closeNavbar);
+        });
+      }
+    },
+    closeNavbar() {
+      this.isOpen = false;
+      document.removeEventListener('click', this.closeNavbar);
     },
   },
 });
