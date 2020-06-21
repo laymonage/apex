@@ -1,4 +1,4 @@
-import logo from '@/assets/img/logo.svg';
+import apex from '@/assets/img/projects/apex.svg';
 import kbbi from '@/assets/img/projects/kbbi.png';
 import sigap from '@/assets/img/projects/sigap.png';
 import santun from '@/assets/img/projects/santun.png';
@@ -10,7 +10,7 @@ export const data = [
   {
     id: 0,
     image: {
-      src: logo,
+      src: apex,
       class: ['w-6/12', 'md:w-8/12', 'xl:w-7/12'],
     },
     title: 'laymonage.com',
