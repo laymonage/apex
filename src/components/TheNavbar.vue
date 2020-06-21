@@ -56,6 +56,7 @@
         v-for="(link, idx) in navLinks"
         :key="idx"
         :to="link.to"
+        :class="{'router-link-exact-active': $route.name === link.name}"
         class="p-2 xs:mt-2 xs:first:mt-1 sm:ml-4 sm:first:ml-0 block rounded
         focus:outline-none focus:bg-gray-200 hover:bg-gray-200
         dark:focus:bg-blue-900 dark:hover:bg-blue-900"
