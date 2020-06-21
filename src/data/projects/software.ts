@@ -21,6 +21,7 @@ export const data = [
       children: [
         'Responsive design for devices with screen width of 320px and up.',
         'Clean architecture with reusable single-file components.',
+        'Dark and light modes support.',
       ],
     },
   },
