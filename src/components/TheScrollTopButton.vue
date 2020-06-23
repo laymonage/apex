@@ -40,7 +40,6 @@ export default Vue.extend({
   data() {
     return {
       showButton: false,
-      lastScrollPosition: 0,
     };
   },
   mounted() {
