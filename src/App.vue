@@ -26,6 +26,7 @@
 import Vue from 'vue';
 import TheNavbar from '@/components/TheNavbar.vue';
 import TheScrollTopButton from '@/components/TheScrollTopButton.vue';
+import { routes } from '@/router/routes';
 
 export default Vue.extend({
   name: 'App',
@@ -35,11 +36,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      navLinks: [
-        { name: 'Home', to: '/' },
-        { name: 'Profile', to: '/profile' },
-        { name: 'Projects', to: '/projects' },
-      ],
+      navLinks: routes.filter((route) => route.path !== '/*'),
       dark: false,
     };
   },

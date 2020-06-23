@@ -56,7 +56,7 @@
       <router-link
         v-for="(link, idx) in navLinks"
         :key="idx"
-        :to="link.to"
+        :to="link.path"
         :class="{'router-link-exact-active': $route.name === link.name}"
         class="p-2 xs:mt-2 xs:first:mt-1 sm:ml-4 sm:first:ml-0 block rounded
         focus:outline-none focus:bg-gray-200 hover:bg-gray-200
@@ -88,7 +88,7 @@ export default Vue.extend({
   props: {
     navLinks: {
       type: Array,
-      default: () => [{ name: 'Home', to: '/' }],
+      default: () => [{ name: 'Home', path: '/' }],
     },
     isDark: Boolean,
   },
