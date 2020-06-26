@@ -5,6 +5,7 @@ import santun from '@/assets/img/projects/santun.png';
 import flappymecin from '@/assets/img/projects/flappymecin.png';
 import aiden from '@/assets/img/projects/aiden.svg';
 import ssoui from '@/assets/img/projects/sso-ui.png';
+import evaluation from '@/assets/img/projects/eval.png';
 
 export const data = [
   {
@@ -142,6 +143,23 @@ export const data = [
         'Utilizes `django-cas-ng` to authenticate with UI\'s SSO system.',
         '100% code coverage and 10/10 code quality rated by `pylint`.',
         'Includes preconfigured Travis CI script for linting, testing, and Heroku deployment.',
+      ],
+    },
+  },
+  {
+    id: 7,
+    image: {
+      src: evaluation,
+      class: ['w-1/2'],
+    },
+    title: 'eval',
+    url: 'https://github.com/laymonage/eval',
+    description: 'A simple form to write anonymous evaluations for me.',
+    details: {
+      type: 'disc',
+      children: [
+        'Minimal setup with HTML, CSS (Materialize), and JS (JQuery).',
+        'Serverless architecture with Netlify Forms to handle form submissions.',
       ],
     },
   },
