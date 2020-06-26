@@ -26,6 +26,11 @@ export const routes = [
     component: () => import('@/views/Projects.vue' /* webpackChunkName: "projects" */),
   },
   {
+    path: '/blogs',
+    name: 'Blogs',
+    component: () => import('@/views/Blogs.vue' /* webpackChunkName: "blogs" */),
+  },
+  {
     path: '/*',
     name: 'Not Found',
     component: NotFound,
