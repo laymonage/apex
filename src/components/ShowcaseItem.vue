@@ -3,11 +3,13 @@
     class="flex flex-col md:flex-row justify-between items-start md:items-center my-12"
   >
     <div class="w-full sm:w-9/12 md:w-5/12 lg:w-3/12 mx-auto">
-      <BaseImage
-        :image="item.image.src"
-        :class="item.image.class"
-        class="mx-auto rounded"
-      />
+      <a :href="item.url">
+        <BaseImage
+          :image="item.image.src"
+          :class="item.image.class"
+          class="mx-auto rounded"
+        />
+      </a>
     </div>
     <div class="md:w-7/12 lg:w-9/12 mt-4 md:mt-0 md:ml-8">
       <h3 class="text-3xl md:text-4xl">
