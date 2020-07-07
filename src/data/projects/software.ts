@@ -1,3 +1,4 @@
+import jsonfield from '@/assets/img/projects/django-jsonfield-backport.svg';
 import apex from '@/assets/img/projects/apex.svg';
 import kbbi from '@/assets/img/projects/kbbi.png';
 import sigap from '@/assets/img/projects/sigap.png';
@@ -8,6 +9,26 @@ import ssoui from '@/assets/img/projects/sso-ui.png';
 import evaluation from '@/assets/img/projects/eval.png';
 
 export const data = [
+  {
+    id: 8,
+    image: {
+      src: jsonfield,
+      class: ['w-6/12', 'md:w-8/12', 'xl:w-7/12', 'rounded-full'],
+    },
+    title: 'django-jsonfield-backport',
+    url: 'https://github.com/laymonage/django-jsonfield-backport',
+    description: 'Backport of the cross-DB JSONField model and form fields from Django 3.1.',
+    details: {
+      type: 'disc',
+      children: [
+        'Brings a highly-anticipated feature of Django 3.1 into previous versions.',
+        'Supports multiple versions of MariaDB, MySQL, Oracle Database, PostgreSQL, and SQLite.',
+        '`isort` and `flake8`-compliant with `black` code style and 100% code coverage.',
+        'Automated testing on 29 different system environments with Django 2.2, 3.0, and 3.1.',
+        'Automated PyPI releases with GitHub Actions.',
+      ],
+    },
+  },
   {
     id: 0,
     image: {
@@ -43,7 +64,7 @@ export const data = [
         'Built with `requests`, `beautifulsoup4`, and Python\'s `argparse` module.',
         '25+ stars and used by 80+ projects on GitHub.',
         '17,500+ downloads according to [PePy](https://pepy.tech/project/kbbi).',
-        '`flake8`-compliant with `black` code style and 100% code coverage.',
+        '`isort` and `flake8`-compliant with `black` code style and 100% code coverage.',
         'Automated PyPI releases with GitHub Actions.',
       ],
     },
