@@ -43,5 +43,6 @@ requireComponent.keys().forEach((fileName) => {
 
 new Vue({
   router,
+  mounted: () => document.dispatchEvent(new Event('x-app-rendered')),
   render: (h) => h(App),
 }).$mount('#app');

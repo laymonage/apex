@@ -18,8 +18,8 @@ module.exports = {
       rules: {
         'global-require': 'off',
         'import/no-extraneous-dependencies': 'off',
-      }
-    }
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 2020,

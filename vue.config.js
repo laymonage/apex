@@ -18,4 +18,20 @@ module.exports = {
       .use('file-loader')
       .loader('file-loader');
   },
+
+  pluginOptions: {
+    prerenderSpa: {
+      registry: undefined,
+      renderRoutes: [
+        '/',
+        '/profile',
+        '/projects',
+        '/blog',
+        '/404',
+      ],
+      useRenderEvent: true,
+      headless: true,
+      onlyProduction: true,
+    },
+  },
 };
