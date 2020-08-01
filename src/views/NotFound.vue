@@ -15,7 +15,7 @@
         <span>Not Found</span>
       </template>
 
-      <div class="flex flex-col text-left text-gray-700 md:text-2xl text-xl ph:text-lg mt-6">
+      <div class="flex flex-col text-left md:text-2xl text-xl ph:text-lg mt-6">
         <span>
           Sorry, but I can't seem to find what you're looking for
           <span class="whitespace-no-wrap">:(</span>
