@@ -45,7 +45,7 @@ export default Vue.extend({
       localStorage.dark = value;
     },
   },
-  mounted() {
+  created() {
     if (localStorage.dark) {
       this.dark = localStorage.dark === 'true';
     } else {
