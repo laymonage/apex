@@ -27,6 +27,8 @@ import Vue from 'vue';
 import TheNavbar from '@/components/TheNavbar.vue';
 import TheScrollTopButton from '@/components/TheScrollTopButton.vue';
 import { routes } from '@/router/routes';
+import Contact from '@/data/contact';
+import Logo from '@/assets/img/projects/apex.svg';
 
 export default Vue.extend({
   name: 'App',
@@ -54,6 +56,19 @@ export default Vue.extend({
         && window.matchMedia('(prefers-color-scheme: dark)').matches
       );
     }
+  },
+  metaInfo() {
+    return {
+      meta: [
+        { vmid: 'title', name: 'title', content: Contact.alias },
+        { vmid: 'description', name: 'description', content: Contact.metaDescription },
+        { vmid: 'og:type', property: 'og:type', content: 'website' },
+        { vmid: 'og:title', property: 'og:title', content: Contact.alias },
+        { vmid: 'og:description', property: 'og:description', content: Contact.metaDescription },
+        { vmid: 'og:image', property: 'og:image', content: `${Logo}` },
+        { vmid: 'twitter:card', property: 'twitter:card', content: 'summary' },
+      ],
+    };
   },
 });
 </script>

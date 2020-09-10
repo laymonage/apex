@@ -18,4 +18,5 @@ module.exports = {
       .use('file-loader')
       .loader('file-loader');
   },
+  publicPath: process.env.HOST_URL,
 };

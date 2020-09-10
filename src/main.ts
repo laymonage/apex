@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueMeta from 'vue-meta';
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import VueLazyload from 'vue-lazyload';
@@ -16,6 +17,8 @@ Vue.use(
     observer: true,
   },
 );
+
+Vue.use(VueMeta);
 
 const requireComponent = require.context(
   '@/components/base',
