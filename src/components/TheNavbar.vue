@@ -155,7 +155,7 @@ export default Vue.extend({
   @apply font-bold text-blue-900;
 }
 
-.theme-dark .navbar a {
+.dark .navbar a {
   @apply text-blue-200;
 }
 
@@ -163,7 +163,7 @@ export default Vue.extend({
   @apply text-blue-600;
 }
 
-.theme-dark .navbar a.router-link-exact-active {
+.dark .navbar a.router-link-exact-active {
   @apply text-blue-100;
 }
 

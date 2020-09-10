@@ -2,7 +2,7 @@
   <div
     id="app"
     class="flex flex-col items-center font-sans antialiased"
-    :class="{'theme-dark': dark}"
+    :class="{'dark': dark}"
   >
     <TheNavbar
       :nav-links="navLinks"

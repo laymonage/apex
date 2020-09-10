@@ -4,6 +4,6 @@ a {
   @apply text-blue-700;
 }
 
-.theme-dark a {
+.dark a {
   @apply text-blue-300;
 }
