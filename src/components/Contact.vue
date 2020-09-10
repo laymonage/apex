@@ -5,7 +5,7 @@
     </template>
 
     <template v-slot:subtitle>
-      <span class="text-gray-500 sm:ml-4 mr-2">is</span>
+      <span class="text-gray-500 sm:ml-4 mr-1"> is </span>
       <span>{{ contact.name }}</span>
     </template>
 
