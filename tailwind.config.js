@@ -21,6 +21,7 @@ module.exports = {
   },
   experimental: {
     darkModeVariant: true,
+    applyComplexClasses: true,
   },
   dark: 'class',
   future: {
