@@ -28,7 +28,7 @@ import TheNavbar from '@/components/TheNavbar.vue';
 import TheScrollTopButton from '@/components/TheScrollTopButton.vue';
 import { routes } from '@/router/routes';
 import Contact from '@/data/contact';
-import Logo from '@/assets/img/projects/apex.svg';
+import Logo from '@/assets/img/logo.png';
 
 export default Vue.extend({
   name: 'App',
