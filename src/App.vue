@@ -66,7 +66,7 @@ export default Vue.extend({
         { vmid: 'og:title', property: 'og:title', content: Contact.alias },
         { vmid: 'og:description', property: 'og:description', content: Contact.metaDescription },
         { vmid: 'og:image', property: 'og:image', content: `${Logo}` },
-        { vmid: 'twitter:card', property: 'twitter:card', content: 'summary' },
+        { vmid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       ],
     };
   },
