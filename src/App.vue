@@ -14,7 +14,9 @@
       class="flex w-full min-h-screen items-center
       bg-gray-100 text-gray-700
       dark:bg-gray-900 dark:text-gray-300
-      transition-all duration-300 ease-out"
+      transition-all duration-300 ease-out
+      bg-fixed bg-no-repeat bg-cover"
+      :style="{ 'background-image': `url('${background}'` }"
     >
       <router-view />
     </div>
@@ -29,6 +31,7 @@ import TheScrollTopButton from '@/components/TheScrollTopButton.vue';
 import { routes } from '@/router/routes';
 import Contact from '@/data/contact';
 import Logo from '@/assets/img/logo.png';
+import Background from '@/assets/img/bg.svg';
 
 export default Vue.extend({
   name: 'App',
@@ -40,6 +43,7 @@ export default Vue.extend({
     return {
       navLinks: routes.filter((route) => route.path !== '/*'),
       dark: false,
+      background: Background,
     };
   },
   watch: {
