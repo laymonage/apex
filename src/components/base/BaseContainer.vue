@@ -11,3 +11,11 @@ export default Vue.extend({
   name: 'BaseContainer',
 });
 </script>
+
+<style scoped>
+@media screen and (max-height: 480px) {
+  .container {
+    @apply mt-16;
+  }
+}
+</style>
