@@ -8,8 +8,8 @@ export default {
   description: `
   **Computer Science** student at Universitas Indonesia and an
   **open source** enthusiast.`,
-  metaDescription: `laymonage is Sage M. Abdullah, a Computer Science student
-  at Universitas Indonesia and an open source enthusiast.`,
+  metaDescription: 'laymonage is Sage M. Abdullah, a Computer Science student '
+  + 'at Universitas Indonesia and an open source enthusiast.',
   links: [
     {
       url: 'https://github.com/laymonage',
