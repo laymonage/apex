@@ -12,11 +12,8 @@
     <div
       id="content"
       class="flex w-full min-h-screen items-center
-      bg-gray-100 text-gray-700
-      dark:bg-gray-900 dark:text-gray-300
-      transition-all duration-300 ease-out
-      bg-fixed bg-no-repeat bg-cover bg-center"
-      :style="{ 'background-image': `url('${background}'` }"
+      text-gray-700 dark:text-gray-300
+      transition-all duration-300 ease-out"
     >
       <router-view />
     </div>
@@ -76,3 +73,13 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+#content::before {
+  @apply bg-gray-100 dark:bg-gray-900 fixed top-0 left-0
+  w-full h-full bg-cover bg-center;
+  background-image: url('~@/assets/img/bg.svg');
+  content: '';
+  z-index: -1;
+}
+</style>
