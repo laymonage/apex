@@ -19,7 +19,7 @@ export const data = [
     details: {
       type: 'disc',
       children: [
-        '10,000+ downloads on [DaFont](https://www.dafont.com/sage-sans.font).',
+        '13,500+ downloads on [DaFont](https://www.dafont.com/sage-sans.font).',
         'Featured in some children\'s books published by Verlagsgruppe Oetinger.',
       ],
     },

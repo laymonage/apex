@@ -1,3 +1,4 @@
+import djth from '@/assets/img/projects/djth.png';
 import jsonfield from '@/assets/img/projects/django-jsonfield-backport.svg';
 import apex from '@/assets/img/projects/apex.svg';
 import kbbi from '@/assets/img/projects/kbbi.png';
@@ -9,6 +10,28 @@ import ssoui from '@/assets/img/projects/sso-ui.png';
 import evaluation from '@/assets/img/projects/eval.png';
 
 export const data = [
+  {
+    id: 9,
+    image: {
+      src: djth,
+      class: [],
+    },
+    title: 'django-template-heroku',
+    url: 'https://github.com/laymonage/django-template-heroku',
+    description: `Simple Django project template ready for Heroku deployment
+    with GitLab CI or GitHub Actions.`,
+    details: {
+      type: 'disc',
+      children: [
+        'Single `requirements.txt` file for simplicity.',
+        'Project-wide and app-level static files and templates directories.',
+        'Pre-configured unit tests and functional tests.',
+        '100% code coverage on initial project spawn.',
+        'Automatic testing, coverage checking, and deployment to Heroku.',
+        'Includes GitLab CI and GitHub Actions configurations with caching support for `pip`.',
+      ],
+    },
+  },
   {
     id: 8,
     image: {
@@ -62,8 +85,8 @@ export const data = [
         'Provides a much-needed (unofficial) API and a CLI to the online dictionary.',
         'Supports authentication with a KBBI account to increase the rate limit.',
         'Built with `requests`, `beautifulsoup4`, and Python\'s `argparse` module.',
-        '25+ stars and used by 80+ projects on GitHub.',
-        '17,500+ downloads according to [PePy](https://pepy.tech/project/kbbi).',
+        '30+ stars and used by 80+ projects on GitHub.',
+        '24,000+ downloads according to [PePy](https://pepy.tech/project/kbbi).',
         '`isort` and `flake8`-compliant with `black` code style and 100% code coverage.',
         'Automated PyPI releases with GitHub Actions.',
       ],
