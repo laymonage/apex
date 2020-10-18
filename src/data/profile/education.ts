@@ -10,11 +10,11 @@ export const data = [
       url: 'https://ui.ac.id/en',
       class: ['ph:w-1/2', 'xs:w-4/12', 'w-1/4', 'md:w-7/12', 'p-2', 'dark:bg-white'],
     },
-    subtitle: '**3.93/4.00 CGPA**',
+    subtitle: '**3.91/4.00 CGPA**',
     description: 'Relevant courses taken:',
     dates: {
       start: 'Jun 2017',
-      end: 'Aug 2021',
+      end: 'Jan 2021',
       expected: true,
     },
     details: {

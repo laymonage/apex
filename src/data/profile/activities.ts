@@ -1,5 +1,4 @@
 import dsc from '@/assets/img/profile/dsc.svg';
-import genbi from '@/assets/img/profile/genbi.png';
 
 export const data = [
   {
@@ -15,7 +14,7 @@ export const data = [
     Developer Student Clubs, a program by Google Developers.`,
     dates: {
       start: 'Jul 2019',
-      end: 'present',
+      end: 'Aug 2020',
     },
     details: {
       type: 'disc',
@@ -25,30 +24,6 @@ export const data = [
         'Held workshops, talks, and a sprint to improve students\' software development skills.',
         `Raised awareness about open source by helping students contribute to
         open source software projects.`,
-      ],
-    },
-  },
-  {
-    id: 1,
-    title: '**Commissariat Staff**',
-    institution: 'Generasi Baru Indonesia - Universitas Indonesia Commissariat',
-    institutionLogo: {
-      image: genbi,
-      url: 'https://genbi.id',
-      class: ['w-1/2', 'sm:w-4/12', 'md:w-3/4'],
-    },
-    description: `Became a member of GenBI, a community of
-    [Bank Indonesia](https://www.bi.go.id/en)'s scholarship grantees.`,
-    dates: {
-      start: 'Jul 2019',
-      end: 'present',
-    },
-    details: {
-      type: 'disc',
-      children: [
-        'Held social projects that aim to improve economics literacy in Indonesia.',
-        'Wrote opinion articles for newspaper publications.',
-        'Wrote content to be published in social media feeds.',
       ],
     },
   },

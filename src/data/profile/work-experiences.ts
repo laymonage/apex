@@ -1,8 +1,31 @@
+import viperdev from '@/assets/img/profile/viperdev.svg';
 import csui from '@/assets/img/profile/csui_horizontal_transparent_english.png';
 import gsoc from '@/assets/img/profile/gsoc.png';
 import wmid from '@/assets/img/profile/wmid.svg';
 
 export const data = [
+  {
+    id: 4,
+    title: '**Software Developer**',
+    institution: 'VIPERdev',
+    institutionLogo: {
+      image: viperdev,
+      url: 'https://viper.dev/en',
+      class: ['p-2', 'ph:w-full', 'w-3/4', 'md:w-full', 'dark:bg-white'],
+    },
+    description: 'Developing new products, features, and bug fixes for various startups.',
+    dates: {
+      start: 'Jul 2020',
+      end: 'present',
+    },
+    details: {
+      type: 'disc',
+      children: [
+        'Main tech stack: Django + Celery, Ionic Angular, PostgreSQL, and Docker.',
+        'Working remotely with other team members from all around the world.',
+      ],
+    },
+  },
   {
     id: 0,
     title: '**Teaching Assistant**',
@@ -32,7 +55,7 @@ Programming basics, OOP basics, and GUI basics in Python.`,
 MIPS & AVR architecture and emulated devices (LCD, buttons, keypad).`,
 
         `
-**Web Design and Programming**
+**Web Design and Programming** (2 times)
 
 Web development with Django (with test-driven development), JQuery, Bootstrap,
 GitLab CI, and Heroku.`,

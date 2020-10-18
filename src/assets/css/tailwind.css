@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .filter-white {
+    filter: saturate(0%) brightness(500%);
+  }
+
+  @variants dark {
+    .filter-white {
+      filter: saturate(0%) brightness(500%);
+    }
+  }
+}

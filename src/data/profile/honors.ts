@@ -1,7 +1,23 @@
+import djceu2020 from '@/assets/img/profile/djceu2020.svg';
 import djangochat from '@/assets/img/profile/djangochat.jpg';
 import besutkode from '@/assets/img/profile/besutkode.png';
 
 export const data = [
+  {
+    id: 2,
+    title: '**Speaker**',
+    institution: 'DjangoCon Europe 2020',
+    institutionLogo: {
+      image: djceu2020,
+      url: 'https://www.youtube.com/watch?v=o9Zb1RmS8vk&list=PLY_che_OEsX3Bvg0X8cCgz2Xo7ONwuenz&index=18',
+      class: ['xs:w-9/12', 'sm:w-9/12', 'md:w-full', 'dark:filter-white'],
+    },
+    description: `Delivered a talk titled **"Implementing a Cross-DB \`JSONField\`"**
+    at the DjangoCon Europe 2020 virtual conference.`,
+    dates: {
+      start: 'Sep 2020',
+    },
+  },
   {
     id: 1,
     title: '**Guest**',
