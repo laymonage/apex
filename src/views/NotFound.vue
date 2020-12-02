@@ -4,13 +4,13 @@
       class="w-fit"
       header-class="flex flex-row items-baseline"
     >
-      <template v-slot:header>
+      <template #header>
         <div class="flex flex-row items-baseline">
           <span class="font-bold">404</span>
         </div>
       </template>
 
-      <template v-slot:subtitle>
+      <template #subtitle>
         <span class="text-gray-500 mx-2">—</span>
         <span>Not Found</span>
       </template>
