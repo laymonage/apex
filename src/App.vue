@@ -77,9 +77,10 @@ export default Vue.extend({
 <style scoped>
 #content::before {
   @apply bg-gray-100 dark:bg-gray-900 fixed top-0 left-0
-  w-full h-full bg-cover bg-center;
+  w-screen h-screen bg-cover bg-center;
   background-image: url('~@/assets/img/bg.svg');
   content: '';
   z-index: -1;
+  will-change: transform;
 }
 </style>
