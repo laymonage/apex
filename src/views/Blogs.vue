@@ -20,11 +20,12 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import ShowcaseItem from '@/components/ShowcaseItem.vue';
 import blogs from '@/data/blogs';
 import { scrollToTarget } from '@/utils/route-utils';
 
-export default {
+export default Vue.extend({
   name: 'Blogs',
   components: {
     ShowcaseItem,
@@ -37,5 +38,5 @@ export default {
   mounted() {
     this.$nextTick(() => this.$route.hash && scrollToTarget(this.$route.hash));
   },
-};
+});
 </script>

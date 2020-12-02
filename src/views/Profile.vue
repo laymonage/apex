@@ -24,11 +24,12 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import TimelineItem from '@/components/TimelineItem.vue';
 import profile from '@/data/profile';
 import { scrollToTarget } from '@/utils/route-utils';
 
-export default {
+export default Vue.extend({
   name: 'Profile',
   components: {
     TimelineItem,
@@ -41,5 +42,5 @@ export default {
   mounted() {
     this.$nextTick(() => this.$route.hash && scrollToTarget(this.$route.hash));
   },
-};
+});
 </script>
