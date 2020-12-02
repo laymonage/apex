@@ -1,7 +1,7 @@
 <template>
   <BaseRoundedButton
     :class="{'button-hidden': !showButton}"
-    class="transition-all duration-300 button z-10 fixed bottom-right
+    class="transition duration-300 button z-10 fixed bottom-right
     shadow-lg bg-blue-700 text-white dark:bg-blue-900 focus:outline-none"
   >
     <Up

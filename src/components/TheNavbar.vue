@@ -3,7 +3,7 @@
     class="sm:flex sm:justify-between sm:items-center
     navbar z-10 fixed w-full py-3
     bg-white dark:bg-gray-800 dark:text-blue-200 shadow-md
-    transition-all duration-300 ease-out"
+    transition duration-300 ease-out"
     :class="{ 'navbar-hidden': !showNavbar }"
   >
     <div class="mx-4 flex items-center justify-between flex-grow">

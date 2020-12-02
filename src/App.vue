@@ -13,7 +13,7 @@
       id="content"
       class="flex w-full min-h-screen items-center
       text-gray-700 dark:text-gray-300
-      transition-all duration-300 ease-out"
+      transition duration-300 ease-out"
     >
       <router-view />
     </div>
